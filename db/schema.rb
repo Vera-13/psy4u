@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_28_104430) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_28_111510) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,17 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_28_104430) do
     t.index ["patient_id"], name: "index_bookings_on_patient_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.string "comment"
+    t.float "rating"
+    t.bigint "patient_id"
+    t.bigint "doctor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["doctor_id"], name: "index_reviews_on_doctor_id"
+    t.index ["patient_id"], name: "index_reviews_on_patient_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -35,11 +46,13 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_28_104430) do
     t.string "first_name"
     t.string "last_name"
     t.integer "postal_code"
-    t.boolean "is_doctor"
+    t.boolean "is_doctor", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "bookings", "users", column: "doctor_id"
   add_foreign_key "bookings", "users", column: "patient_id"
+  add_foreign_key "reviews", "users", column: "doctor_id"
+  add_foreign_key "reviews", "users", column: "patient_id"
 end

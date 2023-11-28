@@ -1,0 +1,51 @@
+.doc-card {
+  height: 300px;
+  width: 845px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  img{
+  height: 120px;
+  width: 120px;
+  object-fit: cover
+  }
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 20px;
+  padding: 20px;
+}
+
+
+.box2 {
+  height: 500px;
+  width: 550px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 20px;
+}
+
+.box3 {
+  margin: 20px;
+  height: 200px;
+  width: 250px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 20px;
+}
+.infos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

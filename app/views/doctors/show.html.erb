@@ -1,0 +1,33 @@
+<div class="box">
+  <div class="doc-card">
+    <div>
+      <img src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg">
+      <div><h3>rating</h3></div>
+    </div>
+    <div>
+     <h2>Doctor name</h2>
+      <h3>Availability</h3>
+      <h3>Contact Phone Number</h3>
+      <button>Send an email </button>
+    </div>
+    <div>
+      <h3>Specialization</h3>
+    </div>
+  </div>
+
+<div class="infos">
+  <div class="box2">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta libero quisquam incidunt eum eligendi ut temporibus a natus. Cupiditate culpa id voluptas possimus cum quidem laudantium repudiandae architecto eveniet doloribus!
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eveniet sapiente laudantium, nobis, exercitationem distinctio autem doloribus iure nihil tempora accusamus reprehenderit quos alias obcaecati saepe esse ab maxime natus!</p>
+  </div>
+
+  <div class="box3">
+    <%= simple_form_for([@doctor, @booking], url: doctor_bookings_path(@doctor)) do |f| %>
+    <%= f.input :date,
+    as: :string,
+    input_html: { data: { controller: "datepicker" } }%>
+    <%= f.submit "Book", class: "btn" %>
+    <% end %>
+  </div>
+</div>
+</div>
