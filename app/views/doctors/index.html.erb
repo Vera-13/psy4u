@@ -1,0 +1,10 @@
+<div class="docs-box">
+  <% @doctors.each do |doctor| %>
+  <%= link_to doctor_path(doctor) do %>
+  <div class="docs-card">
+    <%= doctor.first_name %>
+    <%= doctor.last_name %>
+  </div>
+  <% end %>
+  <% end %>
+</div>
