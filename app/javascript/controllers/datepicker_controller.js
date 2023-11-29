@@ -10,9 +10,9 @@ export default class extends Controller {
       minDate:         "today",
       altFormat:       "F j, Y at h:i K",
       dateFormat:      "Y-m-d H:i",
-      defaultHour:     23,
-      defaultMinute:   59,
-      minuteIncrement: 1
+      defaultHour:     9,
+      defaultMinute:   0o0,
+      minuteIncrement: 60
     });
   }
 }

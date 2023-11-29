@@ -5,10 +5,10 @@
       <div><h3>rating</h3></div>
     </div>
     <div>
-     <h2>Doctor name</h2>
+     <h2><%= @doctor.first_name %> <%= @doctor.last_name %></h2>
       <h3>Availability</h3>
       <h3>Contact Phone Number</h3>
-      <button>Send an email </button>
+      <h3><%= @doctor.email %></h3>
     </div>
     <div>
       <h3>Specialization</h3>

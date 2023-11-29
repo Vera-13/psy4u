@@ -1,0 +1,6 @@
+<h1>Hello sunshine!</h1>
+<% if current_user.is_doctor == true %>
+<%= render "doc_board" %>
+<% else %>
+<%= render "pac_board" %>
+<% end %>
