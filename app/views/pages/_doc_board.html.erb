@@ -1,0 +1,11 @@
+<h1>Your bookings</h1>
+<div class="box">
+<% current_user.doctor_bookings.each do |booking| %>
+<p>
+<%= booking.doctor.first_name %> <%= booking.doctor.last_name %> with
+<%= booking.patient.first_name %> <%= booking.patient.last_name %> on
+<%= booking.date.strftime("%b %e at %l:%M %p") %>
+</p>
+<% end %>
+
+</div>

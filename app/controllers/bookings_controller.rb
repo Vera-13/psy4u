@@ -6,11 +6,13 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.doctor = User.find(params[:doctor_id])
+    @doctor = User.find(params[:doctor_id])
+    @booking.doctor = @doctor
+    @booking.patient = current_user
     if @booking.save
-      redirect_to doctor_path(@doctor)
+      redirect_to dashboard_path
     else
-      render :new, status: :unprocessable_entity
+      render "doctors/show", status: :unprocessable_entity
     end
   end
 
@@ -23,6 +25,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:datetime, :patient_id, :doctor_id)
+    params.require(:booking).permit(:date, :patient_id, :doctor_id)
   end
 end
