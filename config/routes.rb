@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   # root "posts#index"
   get "/dashboard", to: "pages#dashboard", as: :dashboard
   resources :reviews, only: [:new, :create, :destroy]
+  
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
 end
