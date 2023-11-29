@@ -10,6 +10,9 @@ class BookingsController < ApplicationController
     @booking.doctor = @doctor
     @booking.patient = current_user
     if @booking.save
+      if Chatroom.find_by(patient: @booking.patient, doctor: @booking.doctor).nil?
+        Chatroom.create(patient: @booking.patient, doctor: @booking.doctor)
+      end
       redirect_to dashboard_path
     else
       render "doctors/show", status: :unprocessable_entity
