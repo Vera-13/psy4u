@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  resources :doctors, only: :show do
+  resources :doctors, only: [:show, :index] do
     resources :bookings, only: [:new, :create, :destroy]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   get "/dashboard", to: "pages#dashboard", as: :dashboard
   resources :reviews, only: [:new, :create, :destroy]
-  
+
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
