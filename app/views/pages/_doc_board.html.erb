@@ -1,11 +1,16 @@
-<h1>Your bookings</h1>
-<div class="box">
-<% current_user.doctor_bookings.each do |booking| %>
-<p>
-<%= booking.doctor.first_name %> <%= booking.doctor.last_name %> with
-<%= booking.patient.first_name %> <%= booking.patient.last_name %> on
-<%= booking.date.strftime("%b %e at %l:%M %p") %>
-</p>
-<% end %>
-
+<div class="book_box">
+  <h1>Your bookings</h1>
+  <div class="row">
+    <div class="col align-self-center">
+      <% current_user.doctor_bookings.each do |booking| %>
+          <div class="book_card">
+            <%= booking.doctor.first_name %> <%= booking.doctor.last_name %> with
+            <%= booking.patient.first_name %> <%= booking.patient.last_name %> on
+            <%= booking.date.strftime("%b %e at %l:%M %p") %>
+            <% chatroom = Chatroom.find_by(patient: booking.patient, doctor: booking.doctor) %>
+            <%= link_to "Message", chatroom_path(chatroom), class: "btn-message" %>
+          </div>
+      <% end %>
+    </div>
+  </div>
 </div>
