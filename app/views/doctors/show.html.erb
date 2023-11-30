@@ -4,19 +4,23 @@
     <div class="box1">
       <div class="box-div">
         <%= image_tag "icon.png", height: 200, width: 200, crop: :fill %>
-
         <div class="rate"><br><h5>rating</h5></div>
       </div>
+
       <div class="box-div-name">
         <h2><%= @doctor.first_name %> <%= @doctor.last_name %></h2>
-        <h6>Online Therapy and In Person Therapy</h6>
+        <h5>Online Therapy & In Person Therapy</h5>
         <br>
-        <h6>+32 456 789</h6>
-        <h6><%= @doctor.email %></h6>
+        <h5>Specialization:</h5>
+        <h5>Couples Therapy</h5>
       </div>
+
       <div class="box-div">
-        <h6>Specialization</h6>
+      <h5>Contacts:</h5>
+      <h5> <i class="fa-solid fa-phone"></i> +32 455 789</h5>
+      <h5> <i class="fa-solid fa-envelope"></i> <%= @doctor.email %></h5>
       </div>
+
     </div>
 
     <div class="box2">
