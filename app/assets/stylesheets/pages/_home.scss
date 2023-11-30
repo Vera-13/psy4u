@@ -1,6 +1,5 @@
 // Specific CSS for your home-page
-.container {
-  font-family: 'Cabin', sans-serif;
+.containerr {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -24,15 +23,19 @@ body {
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  padding: 5px;
+  flex-wrap: wrap;
+
 }
 
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 200px;
+  width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,6 +45,7 @@ body {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 10px;
 }
 
 

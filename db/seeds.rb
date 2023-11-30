@@ -32,3 +32,5 @@ pat4 = User.create(first_name: "Lara", last_name: "Fay", email: "lara.may@test.c
 puts "created #{pat4.first_name}"
 pat5 = User.create(first_name: "Mary-Anne", last_name: "Fay", email: "mary_anne.may@test.com", postal_code: "7000", password: "123456", is_doctor: false)
 puts "created #{pat5.first_name}"
+
+chat1 = Chatroom.create(patient_id: 7, doctor_id: 1)

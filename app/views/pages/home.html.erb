@@ -1,4 +1,4 @@
-<div class="container">
+<div class="containerr">
   <div class="welcome-card">
     <h1>Welcome</h1>
     <br>
@@ -12,21 +12,42 @@
       <input type="text" placeholder="Search..." style="width: 100%;">
     </div>
     <div>
-      <button class="search-button" type="submit">Search</button>
+    <%= link_to "Search", doctors_path, class: "search-button" %>
+
     </div>
   </div>
 
   <div class="cards">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://advice.moodhealth.com/wp-content/uploads/2021/09/long-term-1140x694.jpg?crop=1)">
+      Depression
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://dynamicyou.org/wp-content/uploads/2016/07/8ebee76d-4208-4d0c-998e-05262e55c4c2-1000x1020.jpeg)">
+      Anxiety
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.stack.imgur.com/K76Sp.png)">
+      OCD
+    </div>
+
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Breakfast
+      Bipolar Disorder
     </div>
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-      Lunch
+      Schizophrenia
     </div>
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-      Dinner
+      PTSD
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      Eating Disorders
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+      Couple Therapy
     </div>
   </div>
 

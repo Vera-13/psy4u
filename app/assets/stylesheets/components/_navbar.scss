@@ -12,6 +12,7 @@
   width: 70px;
 }
 
+
 .dropdown-menu {
 background-color: rgba($color: #ebebeb, $alpha: 0.5);
 
@@ -19,4 +20,9 @@ a{
   color: rgb(90, 89, 89);
   font-family: 'Cabin', sans-serif;
 }
+
+.navbar {
+  position: sticky;
+  top: 0;
+
 }
