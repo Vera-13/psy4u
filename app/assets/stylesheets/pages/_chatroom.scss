@@ -1,0 +1,26 @@
+.chat-box {
+  width: 30%;
+  height: 100vh;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  overflow: auto;
+}
+
+.chat-container {
+  background-color: rgb(191, 190, 190);
+  width: 80%;
+  height: 100vh;
+  max-width: 1000px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add padding as needed */
+  box-sizing: border-box;
+}
+
+.input-down {
+  position: sticky;
+  bottom: 0;
+}
