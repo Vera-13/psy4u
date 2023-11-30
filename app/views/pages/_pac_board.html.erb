@@ -4,11 +4,16 @@
     <div class="col align-self-center">
       <% current_user.patient_bookings.each do |booking| %>
         <div class="book_card">
-          <%= booking.patient.first_name %> <%= booking.patient.last_name %> with psychologist
+          You have an appointment with psychologist
           <%= booking.doctor.first_name %> <%= booking.doctor.last_name %> on
           <%= booking.date.strftime("%b %e at %l:%M %p") %>
           <% chatroom = Chatroom.find_by(patient: booking.patient, doctor: booking.doctor) %>
-          <%= link_to "Message", chatroom_path(chatroom), class: "btn-message" %>
+          <%= link_to chatroom_path(chatroom), class: "btn-message" do %>
+          <i class="fa-regular fa-paper-plane"></i>
+          <% end %>
+          <div class="canc_btn">
+          <%= link_to "Cancel", booking_path(booking),  class: "btn-message",  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          </div>
         </div>
       <% end %>
     </div>

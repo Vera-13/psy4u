@@ -1,33 +1,38 @@
-<div class="box">
-  <div class="doc-card">
-    <div>
-      <img src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg">
-      <div><h3>rating</h3></div>
-    </div>
-    <div>
-     <h2><%= @doctor.first_name %> <%= @doctor.last_name %></h2>
-      <h3>Availability</h3>
-      <h3>Contact Phone Number</h3>
-      <h3><%= @doctor.email %></h3>
-    </div>
-    <div>
-      <h3>Specialization</h3>
-    </div>
-  </div>
+<div class="">
 
-<div class="infos">
-  <div class="box2">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta libero quisquam incidunt eum eligendi ut temporibus a natus. Cupiditate culpa id voluptas possimus cum quidem laudantium repudiandae architecto eveniet doloribus!
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eveniet sapiente laudantium, nobis, exercitationem distinctio autem doloribus iure nihil tempora accusamus reprehenderit quos alias obcaecati saepe esse ab maxime natus!</p>
-  </div>
+  <div class="box">
+    <div class="box1">
+      <div class="box-div">
+        <%= image_tag "icon.png", height: 200, width: 200, crop: :fill %>
 
-  <div class="box3">
-    <%= simple_form_for([@doctor, @booking], url: doctor_bookings_path(@doctor)) do |f| %>
-    <%= f.input :date,
-    as: :string,
-    input_html: { data: { controller: "datepicker" } }%>
-    <%= f.submit "Book", class: "btn" %>
-    <% end %>
+        <div class="rate"><br><h5>rating</h5></div>
+      </div>
+      <div class="box-div-name">
+        <h2><%= @doctor.first_name %> <%= @doctor.last_name %></h2>
+        <h6>Online Therapy and In Person Therapy</h6>
+        <br>
+        <h6>+32 456 789</h6>
+        <h6><%= @doctor.email %></h6>
+      </div>
+      <div class="box-div">
+        <h6>Specialization</h6>
+      </div>
+    </div>
+
+    <div class="box2">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta libero quisquam incidunt eum eligendi ut temporibus a natus. Cupiditate culpa id voluptas possimus cum quidem laudantium repudiandae architecto eveniet doloribus!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eveniet sapiente laudantium, nobis, exercitationem distinctio autem doloribus iure nihil tempora accusamus reprehenderit quos alias obcaecati saepe esse ab maxime natus!</p>
+    </div>
+
+
+    <div class="box3">
+      <%= simple_form_for([@doctor, @booking], url: doctor_bookings_path(@doctor)) do |f| %>
+      <%= f.input :date, :label => "Choose date",
+          as: :string,
+          input_html: { data: { controller: "datepicker" } }%>
+      <%= f.submit "Book", class: "btn-message" %>
+      <% end %>
+    </div>
+
   </div>
-</div>
 </div>
