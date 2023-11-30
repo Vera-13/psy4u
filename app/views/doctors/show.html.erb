@@ -3,7 +3,11 @@
   <div class="box">
     <div class="box1">
       <div class="box-div">
-        <%= image_tag "icon.png", height: 200, width: 200, crop: :fill %>
+        <% if @doctor.photo.attached? %>
+            <%= cl_image_tag @doctor.photo.key,gravity: :faces, height: 200, width: 200, crop: :fill %>
+          <% else %>
+            <%= image_tag "icon.png" , height: 200, width: 200, crop: :fill %>
+          <% end %>
         <div class="rate"><br><h5>rating</h5></div>
       </div>
 

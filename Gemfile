@@ -78,3 +78,4 @@ end
 
 gem "flatpickr_rails"
 gem "dotenv-rails"
+gem "cloudinary"

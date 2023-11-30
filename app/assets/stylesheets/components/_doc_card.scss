@@ -20,7 +20,8 @@
   img{
   height: 120px;
   width: 120px;
-  object-fit: cover
+  object-fit: cover;
+  border-radius: 50%;
   }
   .rate {
     justify-content: center;
@@ -117,6 +118,7 @@
   img {
     width: 150px;
     height: 150px;
+    border-radius: 50%;
   }
 }
 
