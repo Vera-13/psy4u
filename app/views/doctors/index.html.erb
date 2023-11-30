@@ -1,20 +1,25 @@
 <div class="docx_box">
-  <div class="row">
-    <div class="col align-self-center">
+
+
       <% @doctors.each do |doctor| %>
-        <div class="docs-box">
-          <%= link_to doctor_path(doctor) do %>
+          <%= link_to doctor_path(doctor), class: "docs-box" do %>
             <div class="img-rat">
-              <%= image_tag "default_avatar.png" , height: 200, width: 200, crop: :fill %>
-              <p>rating</p>
+
+             <%= image_tag "icon.png", height: 200, width: 200, crop: :fill %>
+             <p class="rating">rating stars</p>
             </div>
+
             <div class="docs-info">
-              <%= doctor.first_name %>
-              <%= doctor.last_name %>
+            <p><h5><%= doctor.first_name %> <%= doctor.last_name %></h5></p>
+            <p><br>Address</p>
+            <p> 50$ per session</p>
             </div>
+            <div class="future-map">
+
+            </div>
+
           <% end %>
-        </div>
       <% end %>
-    </div>
-  </div>
+
+
 </div>
