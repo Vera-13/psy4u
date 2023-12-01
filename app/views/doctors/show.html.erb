@@ -9,18 +9,19 @@
             <%= image_tag "icon.png" , height: 200, width: 200, crop: :fill %>
           <% end %>
         <div class="rate"><br><h5>rating</h5></div>
+        <div><%= link_to "Review", new_doctor_review_path(@doctor) %></div>
       </div>
 
       <div class="box-div-name">
         <h2><%= @doctor.first_name %> <%= @doctor.last_name %></h2>
         <h5>Online Therapy & In Person Therapy</h5>
         <br>
-        <h5>Specialization:</h5>
+        <h6>Specialization:</h6>
         <h5>Couples Therapy</h5>
       </div>
 
       <div class="box-div">
-      <h5>Contacts:</h5>
+      <h6>Contacts:</h6>
       <h5> <i class="fa-solid fa-phone"></i> +32 455 789</h5>
       <h5> <i class="fa-solid fa-envelope"></i> <%= @doctor.email %></h5>
       </div>
@@ -28,19 +29,22 @@
     </div>
 
     <div class="box2">
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta libero quisquam incidunt eum eligendi ut temporibus a natus. Cupiditate culpa id voluptas possimus cum quidem laudantium repudiandae architecto eveniet doloribus!
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eveniet sapiente laudantium, nobis, exercitationem distinctio autem doloribus iure nihil tempora accusamus reprehenderit quos alias obcaecati saepe esse ab maxime natus!</p>
+    <br>
+    <p>About <%= @doctor.first_name %>: </p>
+    <p> Welcome to my corner of insight and understanding. As a dedicated psychologist, I'm committed to guiding individuals through their unique journeys of self-discovery and healing. With a blend of empathy, expertise, and a passion for mental wellness, I strive to create a safe, nurturing space where my clients can explore, grow, and thrive. Join me as we navigate the complexities of the human mind and embark on a transformative path toward well-being and fulfillment
+    </p>
     </div>
 
 
     <div class="box3">
       <%= simple_form_for([@doctor, @booking], url: doctor_bookings_path(@doctor)) do |f| %>
-      <%= f.input :date, :label => "Choose date",
+      <%= f.input :date, :label => "Choose a date",
           as: :string,
           input_html: { data: { controller: "datepicker" } }%>
       <%= f.submit "Book", class: "btn-message" %>
       <% end %>
     </div>
+
 
   </div>
 </div>

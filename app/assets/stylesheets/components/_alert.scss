@@ -4,10 +4,21 @@
   right: 16px;
   z-index: 1000;
 }
-h1 h2 h3 h4 h5 h6 h7 h8 p a {
-  font-family: 'Cabin', sans-serif;
-}
 h1 {
-  font-family: 'Cabin', sans-serif;
-  font-weight: 700;
+  color: $gray;
+}
+h2 {
+  color: $gray2;
+}
+h3 {
+  color: $gray2;
+}
+h4 {
+  color: $gray2;
+}
+h5 {
+  color: $gray2;
+}
+h6 {
+  color: $gray3;
 }

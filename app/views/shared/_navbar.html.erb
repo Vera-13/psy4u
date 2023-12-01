@@ -19,7 +19,7 @@
             <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key,gravity: :faces,height: 50, width: 50, crop: :thumb, radius: :max%>
             <% else %>
-              <%= image_tag "icon.png" , height: 200, width: 200, crop: :fill %>
+              <%= image_tag "icon.png" , height: 40, width: 40, crop: :fill %>
             <% end %>
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
