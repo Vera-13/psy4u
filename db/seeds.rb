@@ -69,3 +69,14 @@ pat5.photo.attach(io: file, filename: "#{pat5.first_name}.png", content_type: "i
 puts "created #{pat5.first_name}"
 
 chat1 = Chatroom.create(patient_id: 7, doctor_id: 1)
+
+Review.create!(patient_id: pat1.id, doctor_id: user1.id, comment: "Thank you for the support and your help.", rating: "4.0")
+Review.create!(patient_id: pat2.id, doctor_id: user1.id, comment: "Exceptional psychologist!.", rating: "5.0")
+Review.create!(patient_id: pat3.id, doctor_id: user2.id, comment: "I highly recommend their services for anyone seeking genuine support to mental well-being", rating: "3.0")
+Review.create!(patient_id: pat4.id, doctor_id: user2.id, comment: "Outstanding psychologist—professional, empathetic, and transformative.", rating: "4.0")
+Review.create!(patient_id: pat5.id, doctor_id: user3.id, comment: "Thank you for the support and your help.", rating: "5.0")
+Review.create!(patient_id: pat1.id, doctor_id: user3.id, comment: "Outstanding psychologist—professional, empathetic, and transformative.", rating: "4.0")
+Review.create!(patient_id: pat2.id, doctor_id: user4.id, comment: "Thank you for the support and your help.", rating: "3.0")
+Review.create!(patient_id: pat3.id, doctor_id: user4.id, comment: "Outstanding psychologist—professional, empathetic, and transformative.", rating: "4.0")
+Review.create!(patient_id: pat4.id, doctor_id: user5.id, comment: "Outstanding psychologist—professional, empathetic, and transformative.", rating: "5.0")
+Review.create!(patient_id: pat1.id, doctor_id: user5.id, comment: "Thank you for the support and your help.", rating: "4.0")
