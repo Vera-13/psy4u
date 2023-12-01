@@ -19,13 +19,16 @@
           <% end %>
 
           <div class="canc_btn">
-          <%= link_to "Cancel", booking_path(booking),  class: "btn-cancel",  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          <%= link_to booking_path(booking),  class: "btn-cancel",  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+          Cancel
+          <i class="fa-solid fa-square-xmark"></i>
+          <% end %>
           </div>
         </div>
 
 
-  <% end %>
       </div>
+  <% end %>
 
 
 </div>
