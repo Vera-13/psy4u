@@ -1,16 +1,27 @@
 <div class="">
 
+  <%= link_to doctors_path, class: "back-arrow" do %>
+  <i class="fa-solid fa-arrow-left"></i>
+  <% end %>
   <div class="box">
     <div class="box1">
+
       <div class="box-div">
         <% if @doctor.photo.attached? %>
             <%= cl_image_tag @doctor.photo.key,gravity: :faces, height: 200, width: 200, crop: :fill %>
           <% else %>
             <%= image_tag "icon.png" , height: 200, width: 200, crop: :fill %>
           <% end %>
-        <div class="rate"><br><h5>rating</h5></div>
-        <div><%= link_to "Review", new_doctor_review_path(@doctor) %></div>
+        <div class="rate">
+          <% unless @doctor.doctor_reviews.empty? %>
+            <% array =  @doctor.doctor_reviews.map do |review| review.rating  end %>
+                <%rat = array.sum / array.size %>
+                <% rat.round.to_i.times do %> ⭐ <% end %>
+          <% end %>
+         </div>
       </div>
+
+
 
       <div class="box-div-name">
         <h2><%= @doctor.first_name %> <%= @doctor.last_name %></h2>
@@ -27,6 +38,7 @@
       </div>
 
     </div>
+
 
     <div class="box2">
     <br>
@@ -45,6 +57,25 @@
       <% end %>
     </div>
 
+    <div class="box4">
+    <div class="div-rev">
+      <h5>Reviews</h5>
+      <div><%= link_to "Review", new_doctor_review_path(@doctor), class: "btn-message"%></div>
+    </div>
+      <%if @doctor.doctor_reviews %>
+        <% @doctor.doctor_reviews.each do |review| %>
+          <div class="box-div">
+            <div>
+            <%= review.comment %>
+            <%  review.rating.to_i.times do  %>⭐<% end %>
+            </div>
+            <hr>
+          </div>
+        <% end %>
+        <% else %>
+          <h5>No reviews yet ... </h5>
+        <% end %>
+    </div>
 
   </div>
 </div>
