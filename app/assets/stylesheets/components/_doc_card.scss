@@ -11,6 +11,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 20px;
   width: 90%;
@@ -19,7 +20,8 @@
   img{
   height: 120px;
   width: 120px;
-  object-fit: cover
+  object-fit: cover;
+  border-radius: 50%;
   }
   .rate {
     justify-content: center;
@@ -49,6 +51,7 @@
   padding: 20px;
   border-radius: 6px;
 }
+
 .infos {
   display: flex;
   flex-direction: row;
@@ -116,6 +119,7 @@
   img {
     width: 150px;
     height: 150px;
+    border-radius: 50%;
   }
 }
 

@@ -77,3 +77,5 @@ group :test do
 end
 
 gem "flatpickr_rails"
+gem "dotenv-rails"
+gem "cloudinary"

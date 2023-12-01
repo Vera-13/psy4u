@@ -4,18 +4,22 @@
       <% @doctors.each do |doctor| %>
           <%= link_to doctor_path(doctor), class: "docs-box" do %>
             <div class="img-rat">
-
-             <%= image_tag "icon.png", height: 200, width: 200, crop: :fill %>
+            <% if doctor.photo.attached? %>
+            <%= cl_image_tag doctor.photo.key,gravity: :faces,height: 200, width: 200, crop: :thumb %>
+            <% else %>
+              <%= image_tag "icon.png" , height: 200, width: 200, crop: :fill %>
+            <% end %>
              <p class="rating">rating stars</p>
             </div>
 
             <div class="docs-info">
-            <p><h5><%= doctor.first_name %> <%= doctor.last_name %></h5></p>
-            <p><br>Address</p>
-            <p> 50$ per session</p>
+            <h4><%= doctor.first_name %> <%= doctor.last_name %></h4>
+            <h5><br>Address</h5>
+            <h5> 50$ per session</h5>
             </div>
             <div class="future-map">
-
+              <h5>Specialization:</h5>
+              <h5>Couple Therapy|Teen Therapy</h5>
             </div>
 
           <% end %>

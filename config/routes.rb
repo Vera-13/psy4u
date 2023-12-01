@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   resources :doctors, only: [:show, :index] do
     resources :bookings, only: [:new, :create]
+    resources :reviews, only: [:new, :create]
   end
 
   resources :bookings, only: :destroy
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   get "/dashboard", to: "pages#dashboard", as: :dashboard
-  resources :reviews, only: [:new, :create, :destroy]
+
 
   resources :chatrooms, only: :show do
     resources :messages, only: :create
