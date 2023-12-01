@@ -1,5 +1,4 @@
 .search-bar {
-  font-family: 'Cabin', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,11 +9,11 @@
   box-sizing: border-box;
 }
 .search-bar input {
+  width: 100%;
   padding: 10px;
-  width: calc(100% - 10px);
   box-sizing: border-box;
   border-radius: 5px;
-  border: 2px solid #ccc;
+  border: 2px solid #8ecae6;
 }
 .search-button {
   display: flex;
