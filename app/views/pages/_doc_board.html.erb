@@ -1,21 +1,27 @@
-<div class="book_box">
   <h1>Your bookings</h1>
-  <div class="row">
-    <div class="col align-self-center">
+<div class="book_box">
+
       <% current_user.doctor_bookings.each do |booking| %>
           <div class="book_card">
+          <div>
+            <h4><%= booking.date.strftime("%b %e at %l:%M %p") %></h4>
             You have an appointment with
-            <%= booking.patient.first_name %> <%= booking.patient.last_name %> on
-            <%= booking.date.strftime("%b %e at %l:%M %p") %>
+            <%= booking.patient.first_name %> <%= booking.patient.last_name %>
+            </div>
+            <div class="btns">
             <% chatroom = Chatroom.find_by(patient: booking.patient, doctor: booking.doctor) %>
-            <%= link_to chatroom_path(chatroom), class: "btn-message" do %>
-          <i class="fa-regular fa-paper-plane"></i>
-          <% end %>
+               <%= link_to chatroom_path(chatroom), class: "btn-message" do %>
+                Message
+                <i class="fa-regular fa-paper-plane"></i>
+              <% end %>
                <div class="canc_btn">
-          <%= link_to "Cancel", booking_path(booking),  class: "btn-message",  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+                <%= link_to booking_path(booking),  class: "btn-cancel",  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                Cancel
+                <i class="fa-solid fa-square-xmark"></i>
+                <% end %>
+              </div>
           </div>
           </div>
       <% end %>
-    </div>
-  </div>
+
 </div>

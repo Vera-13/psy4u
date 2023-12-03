@@ -9,12 +9,13 @@
 .back-arrow {
   padding: 5px;
   margin-left: 20px;
+  margin-top: 7px;
   color: $gray;
   font-size: large;
 }
 .box1 {
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px $lightblue;
   display: flex;
   align-items: space-around;
   justify-content: space-between;
@@ -42,7 +43,7 @@
   height: 30%;
   width: 55%;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px $lightblue;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -53,13 +54,13 @@
   height: 30%;
   width: 30%;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px $lightblue;
   padding: 20px;
   border-radius: 6px;
 }
 .box4 {
     background: white;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px $lightblue;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -79,6 +80,7 @@
 }
 
 .book_box {
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -91,16 +93,22 @@
 }
 
 .book_card {
+  width: 90%;
+  height: 20%;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px $lightblue;
   padding: 30px;
   margin: 20px;
+  display:flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   border-radius: 6px;
+  a {
+    color: $gray2;
+  }
   .canc_btn {
-    margin-top: 7px;
+    margin-top: 10px;
   }
 }
 
@@ -115,7 +123,7 @@
 
 .docs-box {
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px $lightblue;
   width: 90%;
   height: 20%;
   padding: 30px;
@@ -126,19 +134,23 @@
   flex-direction: row;
   justify-content: space-around;
   text-decoration: none;
-  color: black;
+  color: $gray;
   .rating {
     justify-content: center;
     align-items: center;
-    margin-left: 25px;
+    margin-top: 20px;
   }
   .img-rat{
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    box-shadow: 0 0 9px $lightblue;
   }
 }
 

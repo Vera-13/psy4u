@@ -1,0 +1,20 @@
+.rev-container {
+  margin: 20px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.rev-card {
+  background: white;
+  box-shadow: 0 0 15px $lightblue;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 60%;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  margin-top: 30px;
+}

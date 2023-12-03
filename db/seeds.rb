@@ -68,7 +68,7 @@ pat5 = User.create(first_name: "Mary-Anne", last_name: "Fay", email: "mary_anne.
 pat5.photo.attach(io: file, filename: "#{pat5.first_name}.png", content_type: "image/png")
 puts "created #{pat5.first_name}"
 
-chat1 = Chatroom.create(patient_id: 7, doctor_id: 1)
+Chatroom.create(patient_id: 7, doctor_id: 1)
 
 Review.create!(patient_id: pat1.id, doctor_id: user1.id, comment: "Thank you for the support and your help.", rating: "4.0")
 Review.create!(patient_id: pat2.id, doctor_id: user1.id, comment: "Exceptional psychologist!.", rating: "5.0")
