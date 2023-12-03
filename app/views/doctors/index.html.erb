@@ -1,46 +1,43 @@
- <%= link_to root_path, class: "back-arrow" do %>
+<%= link_to root_path, class: "back-arrow" do %>
   <i class="fa-solid fa-arrow-left"></i>
-  <% end %>
+<% end %>
+
 <div class="docx_box">
+  <% @doctors.each do |doctor| %>
+    <%= link_to doctor_path(doctor), class: "docs-box" do %>
 
-
-
-      <% @doctors.each do |doctor| %>
-          <%= link_to doctor_path(doctor), class: "docs-box" do %>
-
-            <div class="img-rat">
-<div class="img-av">
-            <% if doctor.photo.attached? %>
-            <%= cl_image_tag doctor.photo.key,gravity: :faces,height: 200, width: 200, crop: :thumb %>
-            <% else %>
-              <%= image_tag "icon.png" , height: 200, width: 200, crop: :fill %>
-            <% end %>
-</div>
-             <div class="rating">
-             <br>
-              <% unless doctor.doctor_reviews.empty? %>
-                <% array =  doctor.doctor_reviews.map do |review| review.rating  end %>
-                <%rat = array.sum / array.size %>
-                <% rat.round.to_i.times do %>
-                  ⭐
-                <% end %>
-              <% end %>
-            </div>
-
-            </div>
-
-            <div class="docs-info">
-            <h4><%= doctor.first_name %> <%= doctor.last_name %></h4>
-            <h5 class="bold-text"><br>Address</h5>
-            <h5> 50$ per session</h5>
-            </div>
-            <div class="future-map">
-              <h5 class="bold-text">Specialization:</h5>
-              <h5>Couple Therapy|Teen Therapy</h5>
-            </div>
-
+      <div class="img-rat">
+        <div class="img-av">
+          <% if doctor.photo.attached? %>
+           <%= cl_image_tag doctor.photo.key,gravity: :faces, height: 200, width: 200, crop: :thumb %>
+          <% else %>
+            <%= image_tag "icon.png" , height: 200, width: 200, crop: :fill %>
           <% end %>
-      <% end %>
+        </div>
+        <div class="rating">
+          <br>
+          <% unless doctor.doctor_reviews.empty? %>
+            <% array =  doctor.doctor_reviews.map do |review| review.rating  end %>
+            <%rat = array.sum / array.size %>
+            <% rat.round.to_i.times do %>
+            ⭐
+            <% end %>
+            <% end %>
+        </div>
+      </div>
 
+      <div class="docs-info">
+        <h4><%= doctor.first_name %> <%= doctor.last_name %></h4>
+        <h5 class="bold-text"><br>Address:</h5>
+        <h4> 50$ per session</h4>
+      </div>
+
+      <div class="future-map">
+        <h5 class="bold-text">Specialization:</h5>
+        <h4>Couple Therapy Teen Therapy</h4>
+      </div>
+
+    <% end %>
+  <% end %>
 
 </div>

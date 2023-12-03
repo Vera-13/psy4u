@@ -2,7 +2,8 @@
 
 // For example:
 $red: #FD1015;
-$blue: #0D6EFD;
+$blue: #118ab2;
+$lightblue: #9dcee2;
 $yellow: #FFC65A;
 $orange: #E67E22;
 $green: #1EDD88;
@@ -11,3 +12,28 @@ $gray2: #4f5d75;
 $gray3: #475469;
 $gray4: #11212e;
 $light-gray: #f8f9fa;
+
+h1 {
+  color: $gray;
+}
+h2 {
+  color: $gray2;
+}
+h3 {
+  color: $gray2;
+}
+h4 {
+  color: $gray2;
+}
+h5 {
+  color: $gray2;
+}
+h6 {
+  color: $gray4;
+
+}
+
+.bold-text {
+font-weight:900;
+color: rgb(47, 47, 47);
+}

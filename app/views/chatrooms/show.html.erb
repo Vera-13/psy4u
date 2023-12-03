@@ -1,3 +1,6 @@
+<%= link_to dashboard_path, class: "back-arrow" do %>
+  <i class="fa-solid fa-arrow-left"></i>
+<% end %>
 <div class="container chatroom" data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
   data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">

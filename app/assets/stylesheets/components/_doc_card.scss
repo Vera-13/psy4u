@@ -9,12 +9,13 @@
 .back-arrow {
   padding: 5px;
   margin-left: 20px;
+  margin-top: 7px;
   color: $gray;
   font-size: large;
 }
 .box1 {
   background: white;
-  box-shadow: 0 0 15px #9dcee2;
+  box-shadow: 0 0 15px $lightblue;
   display: flex;
   align-items: space-around;
   justify-content: space-between;
@@ -42,7 +43,7 @@
   height: 30%;
   width: 55%;
   background: white;
-  box-shadow: 0 0 15px #9dcee2;
+  box-shadow: 0 0 15px $lightblue;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -53,13 +54,13 @@
   height: 30%;
   width: 30%;
   background: white;
-  box-shadow: 0 0 15px #9dcee2;
+  box-shadow: 0 0 15px $lightblue;
   padding: 20px;
   border-radius: 6px;
 }
 .box4 {
     background: white;
-    box-shadow: 0 0 15px #9dcee2;
+    box-shadow: 0 0 15px $lightblue;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -95,7 +96,7 @@
   width: 90%;
   height: 20%;
   background: white;
-  box-shadow: 0 0 15px #9dcee2;
+  box-shadow: 0 0 15px $lightblue;
   padding: 30px;
   margin: 20px;
   display:flex;
@@ -122,7 +123,7 @@
 
 .docs-box {
   background: white;
-  box-shadow: 0 0 15px #9dcee2;
+  box-shadow: 0 0 15px $lightblue;
   width: 90%;
   height: 20%;
   padding: 30px;
@@ -149,6 +150,7 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    box-shadow: 0 0 9px $lightblue;
   }
 }
 
