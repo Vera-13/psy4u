@@ -60,8 +60,11 @@
     <div class="box4">
     <div class="div-rev">
       <h5>Reviews</h5>
+      <% if @doctor.doctor_bookings.where(patient: current_user, doctor: @doctor).any? %>
       <div><%= link_to "Review", new_doctor_review_path(@doctor), class: "btn-message"%></div>
+      <% end %>
     </div>
+
       <%if @doctor.doctor_reviews %>
         <% @doctor.doctor_reviews.each do |review| %>
           <div class="box-div">
