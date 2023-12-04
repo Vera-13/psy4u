@@ -7,18 +7,21 @@
   padding: 20px;
 }
 .back-arrow {
-  padding: 5px;
-  margin-left: 20px;
-  margin-top: 7px;
-  color: $gray;
-  font-size: large;
+  .fa-solid{
+    padding: 5px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: $gray;
+    font-size: large;
+  }
+
 }
 .box1 {
   background: white;
   box-shadow: 0 0 15px $lightblue;
   display: flex;
   align-items: space-around;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 20px;
   width: 90%;
@@ -34,12 +37,11 @@
   .rate {
     justify-content: center;
     align-items: center;
-    margin-left: 7px;
     margin-top: 20px;
   }
 }
 .box-div {
-  margin: 10px;
+  margin: 5px;
 }
 .box2 {
   height: 30%;
@@ -49,7 +51,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 30px;
   border-radius: 6px;
 }
 .box3 {
@@ -57,7 +59,7 @@
   width: 30%;
   background: white;
   box-shadow: 0 0 15px $lightblue;
-  padding: 20px;
+  padding: 30px;
   border-radius: 6px;
 }
 .box4 {
@@ -96,7 +98,7 @@
 
 .book_card {
   width: 90%;
-  height: 50%;
+  height: 30%;
   background: white;
   box-shadow: 0 0 15px $lightblue;
   padding: 30px;
@@ -167,4 +169,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+}
+.docs-info {
+  margin-top: 10px;
 }
