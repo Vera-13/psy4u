@@ -7,5 +7,12 @@ class DoctorsController < ApplicationController
   def show
     @doctor = User.find(params[:id])
     @booking = Booking.new
+    @marker =
+      {
+        lat: @doctor.latitude,
+        lng: @doctor.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {doctor: @doctor}),
+        marker_html: render_to_string(partial: "marker", locals: {doctor: @doctor})
+      }
   end
 end
