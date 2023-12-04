@@ -7,4 +7,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  validates :postal_code, length: { is: 4 }, numericality: { only_integer: true }, presence: true
+
+  geocoded_by :postal_code
+  after_validation :geocode, if: :will_save_change_to_postal_code?
 end

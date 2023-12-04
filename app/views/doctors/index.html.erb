@@ -30,12 +30,19 @@
         <h4><%= doctor.first_name %> <%= doctor.last_name %></h4>
         <h5 class="bold-text"><br>Address:</h5>
         <h4> 50$ per session</h4>
-      </div>
-
-      <div class="future-map">
         <h5 class="bold-text">Specialization:</h5>
         <h4>Couple Therapy Teen Therapy</h4>
       </div>
+
+      <div class="future-map">
+        <div style="width: 300px; height: 250px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
+
+
 
     <% end %>
   <% end %>
