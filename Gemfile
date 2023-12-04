@@ -77,3 +77,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+gem "flatpickr_rails"
+gem "dotenv-rails"
+gem "cloudinary"
+gem "geocoder"
+
