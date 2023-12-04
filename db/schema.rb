@@ -110,6 +110,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_04_111704) do
     t.integer "postal_code"
     t.boolean "is_doctor", default: false
     t.boolean "do_online", default: true
+    t.float "latitude"
+    t.float "longitude"
     t.integer "price_session"
     t.string "phone_nr"
     t.text "about"
