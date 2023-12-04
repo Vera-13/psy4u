@@ -28,18 +28,13 @@
 
       <div class="docs-info">
         <h4><%= doctor.first_name %> <%= doctor.last_name %></h4>
-<<<<<<< HEAD
         <%# <h5 class="bold-text"><br>Address:</h5> %>
 
         <br>
         <h4>€<%= doctor.price_session %>/session</h4>
       </div>
 
-      <div class="future-map">
-=======
-        <h5 class="bold-text"><br>Address:</h5>
-        <h4> 50$ per session</h4>
->>>>>>> master
+      <div class="">
         <h5 class="bold-text">Specialization:</h5>
         <% doctor.symptoms.each do |s|  %>
         <h4><%= s.name %></h4>
