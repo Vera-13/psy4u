@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (slider.checked) {
       // Code to handle the slider ON state
       console.log('Slider is ON');
-      sliderButton.style.backgroundColor = '#2196F3';
+      sliderButton.style.backgroundColor = '#118ab2';
     } else {
       // Code to handle the slider OFF state
       console.log('Slider is OFF');
-      sliderButton.style.backgroundColor = '#ccc';
+      sliderButton.style.backgroundColor = '#118ab2';
     }
   });
 });
