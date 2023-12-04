@@ -5,41 +5,41 @@ import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 export default class extends Controller {
   static values = {
     apiKey: String,
-    markers: Array
+    marker: Object
   }
 
   connect() {
-
-    console.log(this.markersValue)
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/mapbox/streets-v10"
+      style: "mapbox://styles/poofy-t/clpr2tnvz013101qth4ih4g71",
+      zoom: 10
     })
-    this.#addMarkersToMap
-    this.#fitMapToMarkers()
+
+
+    this.#addMarkerToMap()
+    this.#fitMapToMarker()
 
     }
 
 
-  #addMarkersToMap() {
-    this.markersValue.forEach((marker) => {
-      const popup = new mapboxgl.Popup().setHTML(marker.info_window_html)
+  #addMarkerToMap() {
+      const marker = this.markerValue;
+      const popup = new mapboxgl.Popup().setHTML(marker.info_window_html);
 
-      const customMarker = document.createElement("div")
-      customMarker.innerHTML = marker.marker_html
+      const customMarker = document.createElement("div");
+      customMarker.innerHTML = marker.marker_html;
 
       new mapboxgl.Marker(customMarker)
         .setLngLat([marker.lng, marker.lat])
         .setPopup(popup)
         .addTo(this.map);
-    })
-  }
+    }
 
-  #fitMapToMarkers() {
-    const bounds = new mapboxgl.LngLatBounds();
-    this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
-    this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
-  }
+  #fitMapToMarker() {
+      const bounds = new mapboxgl.LngLatBounds();
+      bounds.extend([this.markerValue.lng, this.markerValue.lat]);
+      this.map.fitBounds(bounds, { padding: 30, maxZoom: 15, duration: 0 });
+    }
 }
