@@ -1,0 +1,27 @@
+.disease {
+  display: flex;
+}
+
+.disease-card {
+  height: 20%;
+  background: white;
+  box-shadow: 0 0 15px $lightblue;
+  padding: 30px;
+  margin: 20px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 6px;
+}
+
+.disease-description {
+  order: 1; /* Keep the text on the left */
+  flex-grow: 1; /* Allow the text to take up remaining space */
+}
+
+.diseas-img {
+  order: 2; /* Move the image to the right */
+  margin-left: 20px; /* Adjust the margin as needed */
+
+}

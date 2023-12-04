@@ -17,8 +17,16 @@ Rails.application.routes.draw do
   # root "posts#index"
   get "/dashboard", to: "pages#dashboard", as: :dashboard
 
-
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
+
+  get "depression", to: "pages#depression", as: :depression
+  get "anxiety", to: "pages#anxiety", as: :anxiety
+  get "ocd", to: "pages#ocd", as: :ocd
+  get "trauma", to: "pages#trauma", as: :trauma
+  get "ptsd", to: "pages#ptsd", as: :ptsd
+  get "adhd", to: "pages#adhd", as: :adhd
+  get "eatingdisorders", to: "pages#eatingdisorders", as: :eatingdisorders
+  get "coupletherapy", to: "pages#coupletherapy", as: :coupletherapy
 end
