@@ -25,16 +25,17 @@
 
       <div class="box-div-name">
         <h2><%= @doctor.first_name %> <%= @doctor.last_name %></h2>
-        <h5>Online Therapy & In Person Therapy</h5>
+        <h4>Online Therapy & In Person Therapy</h4>
         <br>
-        <h6>Specialization:</h6>
-        <h5>Couples Therapy</h5>
+        <h5>Specialization:</h5>
+        <h4>Couples Therapy</h4>
+        <h4>€<%= @doctor.price_session %>/session</h4>
       </div>
 
       <div class="box-div">
-      <h6>Contacts:</h6>
-      <h5> <i class="fa-solid fa-phone"></i> +32 455 789</h5>
-      <h5> <i class="fa-solid fa-envelope"></i> <%= @doctor.email %></h5>
+      <h5>Contacts:</h5>
+      <h4> <i class="fa-solid fa-phone"></i> <%= @doctor.phone_nr %></h4>
+      <h4> <i class="fa-solid fa-envelope"></i> <%= @doctor.email %></h4>
       </div>
 
     </div>
@@ -42,8 +43,8 @@
 
     <div class="box2">
     <br>
-    <p>About <%= @doctor.first_name %>: </p>
-    <p> Welcome to my corner of insight and understanding. As a dedicated psychologist, I'm committed to guiding individuals through their unique journeys of self-discovery and healing. With a blend of empathy, expertise, and a passion for mental wellness, I strive to create a safe, nurturing space where my clients can explore, grow, and thrive. Join me as we navigate the complexities of the human mind and embark on a transformative path toward well-being and fulfillment
+    <h4>About <%= @doctor.first_name %>: </h4>
+    <p> <h5><%= @doctor.about  %> </h5>
     </p>
     </div>
 
