@@ -2,7 +2,7 @@
   <h1>Your bookings </h1>
     <% current_user.patient_bookings.each do |booking| %>
       <div class="book_card">
-         <div>
+        <div>
           <h4><%= booking.date.strftime("%b %e at %l:%M %p") %></h4>
           You have an appointment with psychologist
           <%= link_to doctor_path(booking.doctor) do  %>
@@ -11,7 +11,6 @@
         </div>
 
         <div class="btns">
-
           <% chatroom = Chatroom.find_by(patient: booking.patient, doctor: booking.doctor) %>
           <%= link_to chatroom_path(chatroom), class: "btn-message" do %>
           Message
@@ -25,10 +24,6 @@
           <% end %>
           </div>
         </div>
-
-
       </div>
-  <% end %>
-
-
+    <% end %>
 </div>
