@@ -19,7 +19,6 @@ export default class extends Controller {
         function(date) {
             // return true to disable
             return (date.getDay() === 0 || date.getDay() === 7);
-
         }
     ]
     });
