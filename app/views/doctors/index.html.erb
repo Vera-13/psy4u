@@ -9,7 +9,7 @@
       <div class="img-rat">
         <div class="img-av">
           <% if doctor.photo.attached? %>
-           <%= cl_image_tag doctor.photo.key,gravity: :faces, height: 200, width: 200, crop: :thumb %>
+            <%= cl_image_tag doctor.photo.key,gravity: :faces, height: 200, width: 200, crop: :thumb %>
           <% else %>
             <%= image_tag "icon.png" , height: 200, width: 200, crop: :fill %>
           <% end %>

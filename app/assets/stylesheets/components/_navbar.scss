@@ -3,6 +3,8 @@
   justify-content: space-between;
   background: white;
   box-shadow: 0 0 15px #9dcee2;
+  position: sticky;
+  top: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -29,6 +31,5 @@ a{
 .navbar {
   position: sticky;
   top: 0;
-
 }
 }

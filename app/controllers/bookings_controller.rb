@@ -25,6 +25,7 @@ class BookingsController < ApplicationController
     redirect_to dashboard_path, status: :see_other
   end
 
+
   private
 
   def booking_params

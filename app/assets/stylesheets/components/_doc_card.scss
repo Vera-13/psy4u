@@ -9,7 +9,7 @@
 .back-arrow {
   padding: 5px;
   margin-left: 20px;
-  margin-top: 7px;
+  margin-top: 15px;
   color: $gray;
   font-size: large;
 }
@@ -86,12 +86,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
- a {
+a {
   text-decoration: none;
- }
-
+}
 }
 
 .book_card {
