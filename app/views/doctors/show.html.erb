@@ -29,11 +29,12 @@
         <br>
         <h6>Specialization:</h6>
         <h5>Couples Therapy</h5>
+        <h5>€<%= @doctor.price_session %>/session</h5>
       </div>
 
       <div class="box-div">
       <h6>Contacts:</h6>
-      <h5> <i class="fa-solid fa-phone"></i> +32 455 789</h5>
+      <h5> <i class="fa-solid fa-phone"></i> <%= @doctor.phone_nr %></h5>
       <h5> <i class="fa-solid fa-envelope"></i> <%= @doctor.email %></h5>
       </div>
 
