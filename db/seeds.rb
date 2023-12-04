@@ -9,35 +9,36 @@
 #   end
 require "open-uri"
 Chatroom.destroy_all
+Review.destroy_all
 User.destroy_all
 puts "Cleaned database..."
 
 puts "creating doctors"
 file = URI.open("https://st4.depositphotos.com/12982378/30881/i/450/depositphotos_308819686-stock-photo-positive-woman-pointing-finger-isolated.jpg")
-user1 = User.new(first_name: "Angela", last_name: "May", email: "angela.may@test.com", postal_code: "7000", password: "123456", is_doctor: true)
+user1 = User.new(first_name: "Angela", last_name: "May", email: "angela.may@test.com", postal_code: "7000", password: "123456", is_doctor: true, price_session: "75")
 user1.photo.attach(io: file, filename: "#{user1.first_name}.png", content_type: "image/png")
 user1.save!
 puts "created #{user1.first_name}"
 
 file = URI.open("https://st3.depositphotos.com/9881890/13879/i/600/depositphotos_138797442-stock-photo-smiling-young-woman.jpg")
-user2 = User.new(first_name: "Maria", last_name: "May", email: "maria.may@test.com", postal_code: "7000", password: "123456", is_doctor: true)
+user2 = User.new(first_name: "Maria", last_name: "May", email: "maria.may@test.com", postal_code: "7000", password: "123456", is_doctor: true, price_session: "55")
 user2.photo.attach(io: file, filename: "#{user2.first_name}.png", content_type: "image/png")
 user2.save!
 puts "created #{user2.first_name}"
 
 file = URI.open("https://st2.depositphotos.com/2931363/6569/i/600/depositphotos_65699901-stock-photo-black-man-keeping-arms-crossed.jpg")
-user3 = User.new(first_name: "Mark", last_name: "May", email: "mark.may@test.com", postal_code: "7000", password: "123456", is_doctor: true)
+user3 = User.new(first_name: "Mark", last_name: "May", email: "mark.may@test.com", postal_code: "7000", password: "123456", is_doctor: true, price_session: "65")
 user3.photo.attach(io: file, filename: "#{user3.first_name}.png", content_type: "image/png")
 user3.save!
 
 file = URI.open("https://st.depositphotos.com/2590737/2940/i/600/depositphotos_29407191-stock-photo-successful-elegant-smiling-mature-casual.jpg")
 puts "created #{user3.first_name}"
-user4 = User.create(first_name: "Giuseppe", last_name: "Picco", email: "giuseppe.picco@test.com", postal_code: "7000", password: "123456", is_doctor: true)
+user4 = User.create(first_name: "Giuseppe", last_name: "Picco", email: "giuseppe.picco@test.com", postal_code: "7000", password: "123456", is_doctor: true,price_session: "60")
 user4.photo.attach(io: file, filename: "#{user4.first_name}.png", content_type: "image/png")
 puts "created #{user4.first_name}"
 
 file = URI.open("https://st4.depositphotos.com/12985790/25235/i/600/depositphotos_252354162-stock-photo-excited-curly-african-american-girl.jpg")
-user5 = User.create(first_name: "Abby", last_name: "May", email: "abby.may@test.com", postal_code: "7000", password: "123456", is_doctor: true)
+user5 = User.create(first_name: "Abby", last_name: "May", email: "abby.may@test.com", postal_code: "7000", password: "123456", is_doctor: true, price_session: "70")
 user5.photo.attach(io: file, filename: "#{user5.first_name}.png", content_type: "image/png")
 puts "created #{user5.first_name}"
 
