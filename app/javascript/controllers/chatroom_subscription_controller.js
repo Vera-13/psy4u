@@ -46,4 +46,18 @@ export default class extends Controller {
     return currentUserIsSender ? "sender-style" : "receiver-style"
   }
 
+
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  var submitButton = document.getElementById('submit-button');
+  var inputField = document.querySelector('input[name="message[content]"]');
+
+  inputField.addEventListener('input', function () {
+    if (inputField.value.trim() === '') {
+      submitButton.classList.add('empty-input');
+    } else {
+      submitButton.classList.remove('empty-input');
+    }
+  });
+});

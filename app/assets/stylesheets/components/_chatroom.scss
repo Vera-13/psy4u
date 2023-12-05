@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  height: 85vh;
 
   h1 {
     border-bottom: 1px solid $gray-200;
@@ -29,4 +30,17 @@
       margin-bottom: 0;
     }
   }
+}
+
+.time {
+  margin-left: 247px;
+}
+
+.btn-send{
+  height: 38px;
+  width: 38px;
+  color: white;
+  background-color: #295f7b;
+  border: grey;
+  border-radius: 5px;
 }
