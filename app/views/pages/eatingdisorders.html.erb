@@ -1,6 +1,14 @@
-<div class="disease">
+<div class="container">
+<%= link_to root_path, class: "back-arrow" do %>
+  <i class="fa-solid fa-arrow-left"></i>
+<% end %>
 <div class="disease-card">
-  <h1>Eating Disorders</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1543250903-0eaa21ef14b3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+    <div class="container">
+      <h1> What are <strong>Eating Disorders</strong> ?</h1>
+    </div>
+  </div>
+ <div class="disease-description">
   <br>
   <h3>Overview</h3>
   Eating disorders are serious health conditions that affect both your physical and mental health. These conditions include problems in how you think about food, eating, weight and shape, and in your eating behaviors. These symptoms can affect your health, your emotions and your ability to function in important areas of life.
@@ -34,5 +42,8 @@
     <li>Frequent checking in the mirror for what are thought to be flaws.</li>
     <li>Problems with loss of tooth enamel that may be a sign of repeated vomiting.</li>
   </ul>
+  </div>
 </div>
+   <h2 class="recos">Recommended psychologists</h2>
+<%= render "symp_doc" %>
 </div>

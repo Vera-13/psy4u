@@ -1,4 +1,17 @@
-<div class="disease">
+<div class="container">
+  <%= link_to root_path, class: "back-arrow" do %>
+  <i class="fa-solid fa-arrow-left"></i>
+  <% end %>
+ <div class="disease-card">
+
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+  url(https://images.unsplash.com/photo-1620486729163-23b5225ae75d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFueGlldHl8ZW58MHx8MHx8fDA%3D);">
+    <div class="container">
+      <h1> What is <strong>ADHD</strong><strong></strong> ?</h1>
+    </div>
+  </div>
+
+    <div class="disease-description">
   <h1>ADHD (Attention Deficit Hyperactivity Disorder)</h1>
   <br>
   <h3>Overview</h3>
@@ -31,4 +44,10 @@
   <li>Excessive physical movement</li>
   <li>Little or no sense of danger</li>
   </ul>
+  </div>
+  </div>
+
+   <h2 class="">Recommended psychologists</h2>
+    <%= render "symp_doc" %>
+
 </div>
