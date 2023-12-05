@@ -7,9 +7,9 @@
 
       <div class="box-div">
         <% if @doctor.photo.attached? %>
-            <%= cl_image_tag @doctor.photo.key,gravity: :faces, height: 200, width: 200, crop: :fill %>
+            <%= cl_image_tag @doctor.photo.key,gravity: :faces, height: 350, width: 350, crop: :fill %>
           <% else %>
-            <%= image_tag "icon.png" , height: 200, width: 200, crop: :fill %>
+            <%= image_tag "icon.png" , height: 350, width: 350, crop: :fill %>
           <% end %>
         <div class="rate">
           <% unless @doctor.doctor_reviews.empty? %>
@@ -24,16 +24,20 @@
         <h2><%= @doctor.first_name %> <%= @doctor.last_name %></h2>
         <h4>Online Therapy & In Person Therapy</h4>
         <br>
-        <h5>Specialization:</h5>
+        <br>
+        <h4>Specialization:</h4>
         <% @doctor.symptoms.each do |s|  %>
-        <h4><%= s.name %></h4>
+        <h5><%= s.name %></h5>
         <% end %>
       </div>
 
       <div class="box-div">
-      <h5>Contacts:</h5>
-      <h4> <i class="fa-solid fa-phone"></i> <%= @doctor.phone_nr %></h4>
-      <h4> <i class="fa-solid fa-envelope"></i> <%= @doctor.email %></h4>
+      <h4>Contacts:</h4>
+      <h5> <i class="fa-solid fa-phone"></i> <%= @doctor.phone_nr %></h5>
+      <h5> <i class="fa-solid fa-envelope"></i> <%= @doctor.email %></h5>
+      <br>
+      <br>
+      <br>
       <br>
         <h4>€<%= @doctor.price_session %>/session</h4>
       </div>

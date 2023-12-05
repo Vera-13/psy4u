@@ -3,52 +3,48 @@
 <% end %>
 
 <div class="docx_box">
+
+
+
+
   <% @doctors.each do |doctor| %>
     <%= link_to doctor_path(doctor), class: "docs-box" do %>
-      <div class="img-rat">
-        <div class="img-av">
-          <% if doctor.photo.attached? %>
-            <%= cl_image_tag doctor.photo.key,gravity: :faces, height: 200, width: 200, crop: :thumb %>
-          <% else %>
-            <%= image_tag "icon.png" , height: 300, width: 300, crop: :fill %>
-          <% end %>
-        </div>
-        <div class="rating">
-          <br>
-          <% unless doctor.doctor_reviews.empty? %>
-          <% array =  doctor.doctor_reviews.map do |review| review.rating  end %>
-          <% rat = array.sum / array.size %>
-          <% rat.round.to_i.times do %>
-          ⭐
+        <div class="img-rat">
+          <div class="img-av">
+            <div class="doc-name"><h4><%= doctor.first_name %> <%= doctor.last_name %></h4></div>
+              <% if doctor.photo.attached? %>
+                <%= cl_image_tag doctor.photo.key,gravity: :faces, height: 200, width: 200, crop: :thumb %>
+              <% else %>
+                <%= image_tag "icon.png" , height: 300, width: 300, crop: :fill %>
+              <% end %>
+          </div>
+          <div class="rating">
+            <br>
+            <% unless doctor.doctor_reviews.empty? %>
+              <% array =  doctor.doctor_reviews.map do |review| review.rating  end %>
+                <%rat = array.sum / array.size %>
+                <% rat.round.to_i.times do %>
+                  ⭐
+                <% end %>
             <% end %>
-          <% end %>
+          </div>
         </div>
-      </div>
 
-      <div class="docs-info">
-
-        <div class="doc-name"><h4><%= doctor.first_name %> <%= doctor.last_name %></h4></div>
-          <div class="address"> <h5 class="bold-text"><br>Address:</h5></div>
-            <div class="price"><h4> 50$/h</h4></div>
-              <div class="speck">
-            <h5 class="bold-text">Specialization:</h5>
-          <h4>Couple Therapy Teen Therapy</h4>
+        <div class="doc-specs">
+          <h4 class="bold-text">Specialization:</h4>
+          <h5>Couple Therapy</h5>
+          <h5>OCD</h5>
         </div>
-        <h4><%= doctor.first_name %> <%= doctor.last_name %></h4>
-        <%# <h5 class="bold-text"><br>Address:</h5> %>
 
-        <br>
-        <h4>€<%= doctor.price_session %>/session</h4>
-      </div>
-
-      <div class="">
-        <h5 class="bold-text">Specialization:</h5>
-        <% doctor.symptoms.each do |s|  %>
-        <h4><%= s.name %></h4>
-        <% end %>
-
-      </div>
-
+        <div class="doc-infos">
+          <div class="zip">
+            <h4 class="bold-text"><br>ZIP CODE:</h4>
+          </div>
+          <div class="price">
+            <h4> 50$/h</h4>
+          </div>
+        </div>
     <% end %>
-  <% end %>
+</div>
+<% end %>
 </div>
