@@ -11,25 +11,34 @@ $gray:#2d3142;
 $gray2: #4f5d75;
 $gray3: #475469;
 $gray4: #11212e;
+$gray5: #606266;
 $light-gray: #f8f9fa;
 
 h1 {
   color: $gray;
+  font-family: $h1-font !important;
+  font-weight: bold !important;
 }
+
 h2 {
-  color: $gray2;
+  color: $gray5 !important;
+  font-family: $h2-font !important;
 }
 h3 {
-  color: $gray2;
+  color: $gray5 !important;
+  font-family: $h3-font !important;
 }
 h4 {
-  color: $gray2;
+  color: $gray5 !important;
+  font-family: $h4-font !important;
 }
 h5 {
-  color: $gray2;
+  color: $gray5 !important;
+  font-family: $h5-font !important;
 }
 h6 {
-  color: $gray4;
+  color: $gray5 !important;
+  font-family: $h6-font !important;
   font-weight: 900;
 
 }

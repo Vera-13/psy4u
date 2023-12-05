@@ -106,7 +106,7 @@ a {
   height: 30%;
   background: white;
   box-shadow: 0 0 15px $lightblue;
-  padding: 30px;
+  padding: 50px;
   margin: 20px;
   display:flex;
   flex-wrap: wrap;
@@ -188,6 +188,10 @@ a {
   margin-top: 30px;
 }
 
+
 .doc-name {
   text-align: center;
+.btns {
+  display: flex;
+  align-items: baseline;
 }
