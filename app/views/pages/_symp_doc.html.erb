@@ -1,47 +1,38 @@
-<div class="cards-of-docs ">
-  <% @symptom.specializations.map  do  |spec|  %>
+<%  @symptom.specializations.map  do  |spec|  %>
     <%= link_to doctor_path(spec.doctor), class: "recom-docs" do %>
-    <div class="rats">
-      <div class="img-av">
-        <% if spec.doctor.photo.attached? %>
-          <%= cl_image_tag spec.doctor.photo.key,gravity: :faces, height: 200, width: 200, crop: :thumb %>
-        <% else %>
-          <%= image_tag "icon.png" , height: 200, width: 200, crop: :fill %>
-        <% end %>
+
+      <div class="img-rat">
+        <div class="img-av">
+          <% if spec.doctor.photo.attached? %>
+            <%= cl_image_tag spec.doctor.photo.key,gravity: :faces, height: 200, width: 200, crop: :thumb %>
+          <% else %>
+            <%= image_tag "icon.png" , height: 200, width: 200, crop: :fill %>
+          <% end %>
+        </div>
+
+        <div class="rating">
+          <br>
+          <% unless spec.doctor.doctor_reviews.empty? %>
+            <% array =  spec.doctor.doctor_reviews.map do |review| review.rating  end %>
+            <%rat = array.sum / array.size %>
+            <% rat.round.to_i.times do %>
+            ⭐
+            <% end %>
+            <% end %>
+        </div>
       </div>
 
+      <div class="info">
+        <h3><%= spec.doctor.first_name %> <%= spec.doctor.last_name %></h3>
+        <h4>Psychologist</h4>
+      </div>
 
-    </div>
-
-    <div class="info">
-    <br>
-      <h2><%= spec.doctor.first_name %> <%= spec.doctor.last_name %></h2>
-      <h3>Psychologist</h3>
-      <br>
-      <div class="">
-      <hr>
-      <h4 class="bold-text">Specialization:</h4>
-      <% spec.doctor.symptoms.each do |s|  %>
-      <h3><%= s.name %></h3>
-      <% end %>
-    </div>
-    <hr>
-      <h3>€<%= spec.doctor.price_session %>/session</h3>
-      <div class="doc-rats">
-
-      <% unless spec.doctor.doctor_reviews.empty? %>
-        <% array =  spec.doctor.doctor_reviews.map do |review| review.rating  end %>
-        <%rat = array.sum / array.size %>
-        <% rat.round.to_i.times do %>
-        ⭐
-        <% end %>
+      <div class="div">
+        <h5 class="bold-text">Specialization:</h5>
+        <% spec.doctor.symptoms.each do |s|  %>
+        <h4><%= s.name %></h4>
         <% end %>
       </div>
-    </div>
-
-
-
 
     <% end %>
-  <% end %>
-</div>
+<% end %>
