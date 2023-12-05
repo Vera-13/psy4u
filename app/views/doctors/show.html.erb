@@ -1,5 +1,4 @@
 <div class="">
-
   <%= link_to doctors_path, class: "back-arrow" do %>
   <i class="fa-solid fa-arrow-left"></i>
   <% end %>
@@ -21,8 +20,6 @@
         </div>
       </div>
 
-
-
       <div class="box-div-name">
         <h2><%= @doctor.first_name %> <%= @doctor.last_name %></h2>
         <h4>Online Therapy & In Person Therapy</h4>
@@ -37,9 +34,7 @@
       <h4> <i class="fa-solid fa-phone"></i> <%= @doctor.phone_nr %></h4>
       <h4> <i class="fa-solid fa-envelope"></i> <%= @doctor.email %></h4>
       </div>
-
     </div>
-
 
     <div class="box2">
     <br>
@@ -47,7 +42,6 @@
     <p> <h5><%= @doctor.about  %> </h5>
     </p>
     </div>
-
 
     <div class="box3">
       <%= simple_form_for([@doctor, @booking], url: doctor_bookings_path(@doctor)) do |f| %>
