@@ -7,7 +7,7 @@
   background: white;
   box-shadow: 0 0 15px $lightblue;
   padding: 30px;
-  margin: 70px;
+  margin: 10px 70px 70px 70px;
   display: flex;
   border-radius: 6px;
   justify-content: center;
@@ -44,70 +44,38 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.recommended-box {
-  background: white;
-  box-shadow: 0 0 15px $lightblue;
-  padding: 30px;
-  margin: 10px 70px 70px 70px;
-  display: flex;
-  border-radius: 6px;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.recom-docs{
-  margin: 70px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  background: white;
-  box-shadow: 0 0 15px $lightblue;
-
-  width: 400px;
-  padding: 30px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: $gray;
-  .doc-rats {
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  .rats{
+.recom-docs {
+    background: white;
+    box-shadow: 0 0 15px $lightblue;
+    width: 90%;
+    height: 20%;
+    padding: 30px;
+    margin: 70px 70px 70px 70px;
+    border-radius: 6px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    text-decoration: none;
+    color: $gray;
+    .rating {
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .img-rat{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      box-shadow: 0 0 9px $lightblue;
+    }
   }
-  img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: 0 0 9px $lightblue;
-  }
-  .info {
-  text-align: center
-  }
-}
-.re-psy {
-align-items: center;
-}
-.container {
-  h3 {
-    margin-left: 70px !important;
-    margin-right: 70px !important;
-    align-items: center !important;
-  }
-}
 .recos {
   text-align: center;
-}
-.cards-of-docs {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: white;
-  border-radius: 6px;
 }
