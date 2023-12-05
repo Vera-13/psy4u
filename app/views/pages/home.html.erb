@@ -1,26 +1,22 @@
 <div class="containerr">
 
   <div class="welcome-card">
-    <h1>Find the right path to recovery with the right psy 4 U</h1>
+    <h1>Find the right path to recovery with the right <i>Psy4U</i></h1>
     <br>
     <br>
-    <h2>Here, you'll find a curated selection of experienced psychologists committed to providing expert guidance and support tailored to your unique needs.</h2>
+    <h2>Here you will find a curated selection of experienced psychologists committed to providing expert guidance and support tailored to your needs.</h2>
   </div>
   <br>
   <div class="search-card">
-    <div>
-      <div class="slider-container">
-        <label class="switch">
-        <input type="checkbox" id="slider">
-        <span class="slider"></span>
-        </label>
-      </div>
-    </div>
-    <div class="search-bar">
-      <input type="text" placeholder="Enter your postal code..." style="width: 100%" >
-    </div>
-    <div>
-    <%= link_to "Search", doctors_path, class: "search-button" %>
+      <div class="search-bar">
+      <%= form_with url: doctors_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control-custom",
+              placeholder: "Enter your postal code"
+        %>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <% end %>
     </div>
   </div>
 
