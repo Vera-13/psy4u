@@ -1,10 +1,14 @@
-<div class="disease">
+<div class="container">
   <%= link_to root_path, class: "back-arrow" do %>
     <i class="fa-solid fa-arrow-left"></i>
   <% end %>
 <div class="disease-card">
+ <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1662729217313-aba95936c5b3?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+    <div class="container">
+      <h1> What is <strong>PTSD (Post-traumatic Stress Disorder)</strong><strong></strong> ?</h1>
+    </div>
+  </div>
 <div class="disease-description">
-  <h1>PTSD (Post-traumatic Stress Disorder)</h1>
   <br>
   <h3>Overview</h3>
   Post-Traumatic Stress Disorder (PTSD) is a psychiatric disorder that can occur in people who have experienced or witnessed a traumatic event, series of events or set of circumstances. An individual may experience this as emotionally or physically harmful or life-threatening and may affect mental, physical, social, and/or spiritual well-being. Examples include natural disasters, serious accidents, terrorist acts, war/combat, rape/sexual assault, historical trauma, intimate partner violence and bullying.
@@ -18,4 +22,8 @@
   </ul>
   </div>
 </div>
+
+  <h2 class="">Recommended psychologists</h2>
+
+<%= render "symp_doc" %>
 </div>
