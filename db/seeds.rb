@@ -98,6 +98,9 @@ Review.create!(patient_id: pat2.id, doctor_id: user4.id, comment: "Thank you for
 Review.create!(patient_id: pat3.id, doctor_id: user4.id, comment: "Outstanding psychologist—professional, empathetic, and transformative.", rating: "4.0")
 Review.create!(patient_id: pat4.id, doctor_id: user5.id, comment: "Outstanding psychologist—professional, empathetic, and transformative.", rating: "5.0")
 Review.create!(patient_id: pat1.id, doctor_id: user5.id, comment: "Thank you for the support and your help.", rating: "4.0")
+Review.create!(patient_id: pat3.id, doctor_id: user6.id, comment: "Outstanding psychologist—professional, empathetic, and transformative.", rating: "4.0")
+Review.create!(patient_id: pat4.id, doctor_id: user6.id, comment: "Outstanding psychologist—professional, empathetic, and transformative.", rating: "5.0")
+Review.create!(patient_id: pat1.id, doctor_id: user6.id, comment: "Thank you for the support and your help.", rating: "4.0")
 
 puts "creating specializations"
 Specialization.create!(doctor_id: user3.id, symptom_id: sym1.id)
