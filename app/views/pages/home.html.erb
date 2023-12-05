@@ -1,17 +1,12 @@
 <div class="containerr">
   <div class="welcome-card">
-    <h1>Find the right path to recovery with the right psy 4 U</h1>
+    <h1>Find the right path to recovery with the right <i>Psy4U</i></h1>
     <br>
     <br>
-    <h2>Here, you'll find a curated selection of experienced psychologists committed to providing expert guidance and support tailored to your unique needs.</h2>
+    <h2>Here you will find a curated selection of experienced psychologists committed to providing expert guidance and support tailored to your needs.</h2>
   </div>
   <br>
   <div class="search-card">
-    <div>
-      <button id="statusButton" onclick="toggleStatus()">Online
-        <div id="slider"></div>
-      </button>
-    </div>
       <div class="search-bar">
       <%= form_with url: doctors_path, method: :get, class: "d-flex" do %>
         <%= text_field_tag :query,

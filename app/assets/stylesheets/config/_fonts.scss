@@ -1,5 +1,6 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Crimson+Pro&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
 // Define fonts for body and headers
 $body-font: "Cabin", "Crimson Pro", "Roboto", "sans-serif";
@@ -14,3 +15,10 @@ $headers-font: "Cabin", "Crimson Pro", "Roboto", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+$h1-font: "Raleway";
+$h2-font: "Raleway";
+$h3-font: "Raleway";
+$h4-font: "Raleway";
+$h5-font: "Raleway";
+$h6-font: "Raleway";
