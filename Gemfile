@@ -52,6 +52,8 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 gem "flatpickr_rails"
 gem "cloudinary"
+gem "redis"
+gem "geocoder"
 
 group :development, :test do
   gem "dotenv-rails"
@@ -77,8 +79,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-gem "flatpickr_rails"
-gem "dotenv-rails"
-gem "cloudinary"
-gem "geocoder"
-
