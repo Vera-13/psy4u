@@ -3,11 +3,12 @@
     <% current_user.patient_bookings.each do |booking| %>
       <div class="book_card">
         <div>
-          <h4><%= booking.date.strftime("%b %e at %l:%M %p") %></h4>
-          You have an appointment with psychologist
+          <h3><%= booking.date.strftime("%b %e at %l:%M %p") %></h3>
+          <h4>You have an appointment with psychologist
           <%= link_to doctor_path(booking.doctor) do  %>
           <%= booking.doctor.first_name %> <%= booking.doctor.last_name %>
           <% end %>
+          </h4>
         </div>
 
         <div class="btns">
