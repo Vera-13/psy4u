@@ -1,5 +1,4 @@
-<div class="">
-  <%  @symptom.specializations.map  do  |spec|  %>
+<%  @symptom.specializations.map  do  |spec|  %>
     <%= link_to doctor_path(spec.doctor), class: "recom-docs" do %>
 
       <div class="img-rat">
@@ -10,6 +9,7 @@
             <%= image_tag "icon.png" , height: 200, width: 200, crop: :fill %>
           <% end %>
         </div>
+
         <div class="rating">
           <br>
           <% unless spec.doctor.doctor_reviews.empty? %>
@@ -22,26 +22,17 @@
         </div>
       </div>
 
-      <div class="docs-info">
-        <h2><%= spec.doctor.first_name %> <%= spec.doctor.last_name %></h2>
-        <h3>Psychologist</h3>
-
-
-        <br>
-        <h3>€<%= spec.doctor.price_session %>/session</h3>
+      <div class="info">
+        <h3><%= spec.doctor.first_name %> <%= spec.doctor.last_name %></h3>
+        <h4>Psychologist</h4>
       </div>
 
-      <div class="">
-        <h4 class="bold-text">Specialization:</h4>
+      <div class="div">
+        <h5 class="bold-text">Specialization:</h5>
         <% spec.doctor.symptoms.each do |s|  %>
-        <h3><%= s.name %></h3>
+        <h4><%= s.name %></h4>
         <% end %>
       </div>
 
-
-
-
     <% end %>
-  <% end %>
-
-</div>
+<% end %>

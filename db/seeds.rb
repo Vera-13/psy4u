@@ -54,7 +54,7 @@ user5 = User.create(first_name: "Abby", last_name: "May", email: "abby.may@test.
 user5.photo.attach(io: file, filename: "#{user5.first_name}.png", content_type: "image/png")
 puts "created #{user5.first_name}"
 
-file = URI.open("https://files.slack.com/files-tmb/T02NE0241-F068BFAQVPG-bdef21f136/gabbo_480.png")
+file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.18169-9/15781149_1181995688565497_3639101385938457303_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=be3454&_nc_ohc=Rve-bjDhpyAAX-hz1Y5&_nc_ht=scontent-bru2-1.xx&oh=00_AfDaqP21CvLHD-NmCytm8H7S4kT62j3FSdFdSdv_SHGt6Q&oe=6596CCD0")
 user6 = User.new(first_name: "Leone", last_name: "Claser", email: "leone.claser@gmail.com", postal_code: "1000", password: "123456", is_doctor: true, price_session: "75", phone_nr: "+32 705 035 206", about: "Welcome to my corner of insight and understanding. As a dedicated psychologist, I'm committed to guiding individuals through their unique journeys of self-discovery and healing. With a blend of empathy, expertise, and a passion for mental wellness, I strive to create a safe, nurturing space where my clients can explore, grow, and thrive. Join me as we navigate the complexities of the human mind and embark on a transformative path toward well-being and fulfillment")
 user6.photo.attach(io: file, filename: "#{user6.first_name}.png", content_type: "image/png")
 user6.save!

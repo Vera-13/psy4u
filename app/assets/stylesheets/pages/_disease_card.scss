@@ -48,14 +48,15 @@
     background: white;
     box-shadow: 0 0 15px $lightblue;
     width: 90%;
-    height: 20%;
-    padding: 30px;
+    height: 30%;
+    padding: 20px;
     margin: 70px 70px 70px 70px;
     border-radius: 6px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     flex-direction: row;
-    justify-content: space-around;
+
     text-decoration: none;
     color: $gray;
     .rating {
