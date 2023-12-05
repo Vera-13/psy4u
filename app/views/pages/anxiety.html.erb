@@ -1,10 +1,17 @@
-<div class="disease">
+<div class="container">
 <%= link_to root_path, class: "back-arrow" do %>
   <i class="fa-solid fa-arrow-left"></i>
   <% end %>
 <div class="disease-card">
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1613312328068-c9b6b76c9e8a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+    <div class="container">
+      <h1> What is <strong>Anxiety</strong><strong></strong> ?</h1>
+    </div>
+  </div>
+
 <div class="disease-description">
-  <h1>Anxiety</h1>
+
   <br>
   <h3>Overview</h3>
   <p>
@@ -19,4 +26,8 @@
   </ul>
   </div>
 </div>
+
+ <h2 class="">Recommended psychologists</h2>
+  <%= render "symp_doc" %>
+
 </div>
