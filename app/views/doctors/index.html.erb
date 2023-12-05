@@ -3,35 +3,6 @@
 <% end %>
 
 <div class="docx_box">
-
-      <div class="img-rat">
-        <div class="img-av">
-          <% if doctor.photo.attached? %>
-            <%= cl_image_tag doctor.photo.key,gravity: :faces, height: 200, width: 200, crop: :thumb %>
-          <% else %>
-            <%= image_tag "icon.png" , height: 200, width: 200, crop: :fill %>
-          <% end %>
-        </div>
-        <div class="rating">
-          <br>
-          <% unless doctor.doctor_reviews.empty? %>
-            <% array =  doctor.doctor_reviews.map do |review| review.rating  end %>
-            <%rat = array.sum / array.size %>
-            <% rat.round.to_i.times do %>
-            ⭐
-            <% end %>
-            (<%= array.size %>)
-
-            <% end %>
-        </div>
-      </div>
-
-      <div class="docs-info">
-        <h4><%= doctor.first_name %> <%= doctor.last_name %></h4>
-        <%# <h5 class="bold-text"><br>Address:</h5> %>
-
-
-
   <% @doctors.each do |doctor| %>
     <%= link_to doctor_path(doctor), class: "docs-box" do %>
         <div class="img-rat">
@@ -69,7 +40,6 @@
             <h4> 50$/h</h4>
           </div>
         </div>
+      <% end %>
     <% end %>
-</div>
-<% end %>
 </div>
