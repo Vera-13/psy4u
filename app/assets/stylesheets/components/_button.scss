@@ -24,3 +24,20 @@
     color:  #ff5a5f;
   }
 }
+
+.btn-submit {
+  background-color: #118ab293;
+  color: white;
+  border: 1px solid #a6b8d9;
+  padding: 5px;
+  border-radius: 6px;
+  margin-left: 5px;
+  text-decoration: none;
+  &:hover {
+    color: #4f89a9;
+  }
+}
+
+.btn {
+  background-color: #118ab293;
+}

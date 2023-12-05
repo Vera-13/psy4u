@@ -8,18 +8,19 @@
   <br>
   <div class="search-card">
     <div>
-      <div class="slider-container">
-        <label class="switch">
-        <input type="checkbox" id="slider">
-        <span class="slider"></span>
-        </label>
-      </div>
+      <button id="statusButton" onclick="toggleStatus()">Online
+        <div id="slider"></div>
+      </button>
     </div>
-    <div class="search-bar">
-      <input type="text" placeholder="Enter your postal code..." style="width: 100%" >
-    </div>
-    <div>
-    <%= link_to "Search", doctors_path, class: "search-button" %>
+      <div class="search-bar">
+      <%= form_with url: doctors_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control-custom",
+              placeholder: "Enter your postal code"
+        %>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <% end %>
     </div>
   </div>
 
