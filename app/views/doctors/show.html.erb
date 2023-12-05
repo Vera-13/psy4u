@@ -25,14 +25,17 @@
         <h4>Online Therapy & In Person Therapy</h4>
         <br>
         <h5>Specialization:</h5>
-        <h4>Couples Therapy</h4>
-        <h4>€<%= @doctor.price_session %>/session</h4>
+        <% @doctor.symptoms.each do |s|  %>
+        <h4><%= s.name %></h4>
+        <% end %>
       </div>
 
       <div class="box-div">
       <h5>Contacts:</h5>
       <h4> <i class="fa-solid fa-phone"></i> <%= @doctor.phone_nr %></h4>
       <h4> <i class="fa-solid fa-envelope"></i> <%= @doctor.email %></h4>
+      <br>
+        <h4>€<%= @doctor.price_session %>/session</h4>
       </div>
     </div>
 

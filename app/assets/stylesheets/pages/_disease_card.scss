@@ -1,27 +1,113 @@
 .disease {
   display: flex;
+  flex-direction: column;
 }
 
 .disease-card {
-  height: 20%;
   background: white;
   box-shadow: 0 0 15px $lightblue;
   padding: 30px;
-  margin: 20px;
-  display:flex;
-  flex-wrap: wrap;
+  margin: 70px;
+  display: flex;
+  border-radius: 6px;
   justify-content: center;
   flex-direction: column;
+}
+
+// .disease-description {
+//   // order: 1; /* Keep the text on the left */
+//   flex-grow: 1; /* Allow the text to take up remaining space */
+
+// }
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  img {
+    border-radius: 6px;
+  }
+}
+
+.banner h1 {
+  margin-left: 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.recommended-box {
+  background: white;
+  box-shadow: 0 0 15px $lightblue;
+  padding: 30px;
+  margin: 10px 70px 70px 70px;
+  display: flex;
   border-radius: 6px;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.disease-description {
-  order: 1; /* Keep the text on the left */
-  flex-grow: 1; /* Allow the text to take up remaining space */
+.recom-docs{
+  margin: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  box-shadow: 0 0 15px $lightblue;
+
+  width: 400px;
+  padding: 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: $gray;
+  .doc-rats {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .rats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 9px $lightblue;
+  }
+  .info {
+  text-align: center
+  }
 }
-
-.diseas-img {
-  order: 2; /* Move the image to the right */
-  margin-left: 20px; /* Adjust the margin as needed */
-
+.re-psy {
+align-items: center;
+}
+.container {
+  h3 {
+    margin-left: 70px !important;
+    margin-right: 70px !important;
+    align-items: center !important;
+  }
+}
+.recos {
+  text-align: center;
+}
+.cards-of-docs {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 6px;
 }

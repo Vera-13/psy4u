@@ -1,6 +1,14 @@
-<div class="disease">
+<div class="container">
+<%= link_to root_path, class: "back-arrow" do %>
+  <i class="fa-solid fa-arrow-left"></i>
+  <% end %>
   <div class="disease-card">
-    <h1>Couple Therapy</h1>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1604881991720-f91add269bed?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+    <div class="container">
+      <h1> What is <strong>Couple Therapy</strong><strong></strong> ?</h1>
+    </div>
+  </div>
+  <div class="disease-description">
     <br>
     <h3>Overview</h3>
     <p>Couples therapy is a form of psychotherapy (also known as talk therapy). A licensed therapist with clinical experience — often a Licensed Marriage and Family Therapist (LMFT) — works with couples in romantic relationships. </p>
@@ -16,5 +24,8 @@
     <li>Another clear red flag in a relationship is when a partner uses put downs as a means to keep a person’s self-esteem and self-worth low. Excessive criticism in a relationship does not have a place at all.</li>
     <li>Abuse can be emotional, physical, or psychological, and it further exacerbates stress, distrust, and unhappiness within a relationship. Having an abusive partner can be hard to manage–seeking support and setting clear boundaries is essential when addressing this red flag.</li>
     </ul>
+    </div>
   </div>
+    <h2 class="">Recommended psychologists</h2>
+  <%= render "symp_doc" %>
 </div>

@@ -54,6 +54,11 @@ user5 = User.create(first_name: "Abby", last_name: "May", email: "abby.may@test.
 user5.photo.attach(io: file, filename: "#{user5.first_name}.png", content_type: "image/png")
 puts "created #{user5.first_name}"
 
+file = URI.open("https://files.slack.com/files-tmb/T02NE0241-F068BFAQVPG-bdef21f136/gabbo_480.png")
+user6 = User.new(first_name: "Leone", last_name: "Claser", email: "leone.claser@gmail.com", postal_code: "1000", password: "123456", is_doctor: true, price_session: "75", phone_nr: "+32 705 035 206", about: "Welcome to my corner of insight and understanding. As a dedicated psychologist, I'm committed to guiding individuals through their unique journeys of self-discovery and healing. With a blend of empathy, expertise, and a passion for mental wellness, I strive to create a safe, nurturing space where my clients can explore, grow, and thrive. Join me as we navigate the complexities of the human mind and embark on a transformative path toward well-being and fulfillment")
+user6.photo.attach(io: file, filename: "#{user6.first_name}.png", content_type: "image/png")
+user6.save!
+puts "created #{user6.first_name}"
 
 puts "creating patients"
 file = URI.open("https://st2.depositphotos.com/1017228/12452/i/600/depositphotos_124520052-stock-photo-portrait-of-a-young-happy.jpg")
@@ -106,3 +111,5 @@ Specialization.create!(doctor_id: user2.id, symptom_id: sym6.id)
 Specialization.create!(doctor_id: user4.id, symptom_id: sym7.id)
 Specialization.create!(doctor_id: user5.id, symptom_id: sym9.id)
 Specialization.create!(doctor_id: user5.id, symptom_id: sym4.id)
+Specialization.create!(doctor_id: user6.id, symptom_id: sym1.id)
+Specialization.create!(doctor_id: user6.id, symptom_id: sym2.id)

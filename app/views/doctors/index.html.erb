@@ -26,6 +26,7 @@
       </div>
 
       <div class="docs-info">
+
         <div class="doc-name"><h4><%= doctor.first_name %> <%= doctor.last_name %></h4></div>
           <div class="address"> <h5 class="bold-text"><br>Address:</h5></div>
             <div class="price"><h4> 50$/h</h4></div>
@@ -33,6 +34,19 @@
             <h5 class="bold-text">Specialization:</h5>
           <h4>Couple Therapy Teen Therapy</h4>
         </div>
+        <h4><%= doctor.first_name %> <%= doctor.last_name %></h4>
+        <%# <h5 class="bold-text"><br>Address:</h5> %>
+
+        <br>
+        <h4>€<%= doctor.price_session %>/session</h4>
+      </div>
+
+      <div class="">
+        <h5 class="bold-text">Specialization:</h5>
+        <% doctor.symptoms.each do |s|  %>
+        <h4><%= s.name %></h4>
+        <% end %>
+
       </div>
 
     <% end %>

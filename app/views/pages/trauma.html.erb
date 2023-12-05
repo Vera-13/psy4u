@@ -1,6 +1,14 @@
-<div class="disease">
+<div class="container">
+  <%= link_to root_path, class: "back-arrow" do %>
+    <i class="fa-solid fa-arrow-left"></i>
+  <% end %>
 <div class="disease-card">
-  <h1>Trauma</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1542662803-2f01b9f541db?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+    <div class="container">
+      <h1> What is <strong>Trauma</strong><strong></strong> ?</h1>
+    </div>
+  </div>
+<div class="disease-decription">
   <br>
   <h3>Overview</h3>
   Trauma is the lasting emotional response that often results from living through a distressing event. Experiencing a traumatic event can harm a person’s sense of safety, sense of self, and ability to regulate emotions and navigate relationships. Long after the traumatic event occurs, people with trauma can often feel shame, helplessness, powerlessness and intense fear.
@@ -12,6 +20,8 @@
   <li>a long-term, chronic pattern (e.g., ongoing childhood neglect, sexual or physical abuse).</li>
   </ul>
   A person who has experienced a traumatic event might develop either simple or complex PTSD.
-
 </div>
+</div>
+  <h2 class="">Recommended psychologists</h2>
+<%= render "symp_doc" %>
 </div>
