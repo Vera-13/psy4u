@@ -2,7 +2,9 @@
   <i class="fa-solid fa-arrow-left"></i>
 <% end %>
 
+<h2 class="title">Our pshychologists in your area</h2>
 <div class="docx_box">
+
   <% @doctors.each do |doctor| %>
     <%= link_to doctor_path(doctor), class: "docs-box" do %>
         <div class="img-rat">
