@@ -18,21 +18,41 @@
             <% rat.round.to_i.times do %>
             ⭐
             <% end %>
+            (<%= array.size %>)
             <% end %>
         </div>
       </div>
 
-      <div class="info">
-        <h3><%= spec.doctor.first_name %> <%= spec.doctor.last_name %></h3>
-        <h4>Psychologist</h4>
+      <div class="indexnew">
+        <h4 class="bold-text"><%= spec.doctor.first_name %> <%= spec.doctor.last_name %></h4>
+        <h5>Psychologist</h5>
+        <br>
+        <h5><i class="fa-solid fa-camera"></i> Online therapy</h5>
+        <h5><i class="fa-solid fa-user"></i> In person therapy </h5>
+        <br>
+        <h5> Available on a weekly basis</h5>
+        <br>
+        <h6><i class="fa-solid fa-circle-check"></i> Certified by Psy4U</h6>
       </div>
-
-      <div class="div">
-        <h5 class="bold-text">Specialization:</h5>
+      <div class="indexnew">
+        <h4 class="bold-text">Specialization:</h4>
+        <br>
         <% spec.doctor.symptoms.each do |s|  %>
         <h4><%= s.name %></h4>
         <% end %>
       </div>
 
+      <div class="indexnew">
+        <h4 class="bold-text">Address:</h4>
+        <br>
+        <h5> <i class="fa-solid fa-location-dot"></i> <%= spec.doctor.address %></h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h5> 50€/h</h5>
+      </div>
     <% end %>
 <% end %>
