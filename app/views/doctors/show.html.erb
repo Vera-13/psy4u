@@ -23,7 +23,7 @@
 
       <div class="box-div-name">
         <h2 id="name-show"><%= @doctor.first_name %> <%= @doctor.last_name %></h2>
-        <h4>Online Therapy & In Person Therapy</h4>
+        <h4>Online & In Person Therapy</h4>
         <br>
         <br>
         <h4 id="h4-spec"><strong>Specialization:</strong></h4>
@@ -33,12 +33,10 @@
       </div>
 
       <div class="box-div">
-      <h4><strong>Contacts:</strong></h4>
+      <h4><strong>Contact Information</strong></h4>
       <h5> <i class="fa-solid fa-phone"></i> <%= @doctor.phone_nr %></h5>
-      <br>
       <h5> <i class="fa-solid fa-envelope"></i> <%= @doctor.email %></h5>
       <h5> <i class="fa-solid fa-location-dot"></i> <%= @doctor.address %></h5>
-      <br>
       <br>
       <br>
       <br>
@@ -74,7 +72,7 @@
     <div class="div-rev">
       <h5>Reviews</h5>
       <% if @doctor.doctor_bookings.where(patient: current_user, doctor: @doctor).any? %>
-      <div><%= link_to "Review", new_doctor_review_path(@doctor), class: "btn-book"%></div>
+      <div><%= link_to "Add review", new_doctor_review_path(@doctor), class: "btn-book"%></div>
       <% end %>
     </div>
 
