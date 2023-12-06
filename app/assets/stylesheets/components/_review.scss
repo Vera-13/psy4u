@@ -22,3 +22,17 @@
 .rating {
   font-family: $h5-font;
 }
+
+.star {
+  font-family: $h6-font;
+}
+
+.revcenter {
+  justify-content: center;
+}
+
+.revname {
+  font-family: $h6-font;
+  display: flex;
+  justify-content: flex-end;
+}
