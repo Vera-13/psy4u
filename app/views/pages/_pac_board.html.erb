@@ -1,30 +1,28 @@
 <div class="book_box">
   <h1>Your bookings </h1>
-    <% current_user.patient_bookings.each do |booking| %>
-      <div class="book_card">
-        <div>
-          <h3><%= booking.date.strftime("%b %e at %l:%M %p") %></h3>
-          <h4>You have an appointment with psychologist
+  <% current_user.patient_bookings.each do |booking| %>
+    <div class="book_card">
+      <div class="date-booking">
+        <h3><%= booking.date.strftime("%b %e at %l:%M %p") %></h3>
+        <h4>You have an appointment with psychologist
           <%= link_to doctor_path(booking.doctor) do  %>
-          <%= booking.doctor.first_name %> <%= booking.doctor.last_name %>
+            <strong><%= booking.doctor.first_name %> <%= booking.doctor.last_name %></strong>
           <% end %>
-          </h4>
-        </div>
-
-        <div class="btns">
-          <% chatroom = Chatroom.find_by(patient: booking.patient, doctor: booking.doctor) %>
-          <%= link_to chatroom_path(chatroom), class: "btn-message" do %>
+        </h4>
+      </div>
+      <div class="message-btn">
+        <% chatroom = Chatroom.find_by(patient: booking.patient, doctor: booking.doctor) %>
+        <%= link_to chatroom_path(chatroom), class: "btn-message" do %>
           Message
           <i class="fa-regular fa-paper-plane"></i>
-          <% end %>
-
-          <div class="canc_btn">
-          <%= link_to booking_path(booking),  class: "btn-cancel",  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-          Cancel
-          <i class="fa-solid fa-square-xmark"></i>
-          <% end %>
-          </div>
-        </div>
+        <% end %>
       </div>
-    <% end %>
+      <div class="canc_btn">
+        <%= link_to booking_path(booking),  class: "btn-cancel",  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+            Cancel
+            <i class="fa-solid fa-square-xmark"></i>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
 </div>
