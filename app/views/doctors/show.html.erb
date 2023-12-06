@@ -84,7 +84,7 @@
             <br>
             <%= review.comment %>
             <div class="revname">
-              <%= review.doctor.first_name %> created at <%= review.created_at.strftime("%Y-%m-%d")%>
+             <i> by </i>  <%= review.doctor.first_name %> <i>on</i> <%= review.created_at.strftime("%Y-%m-%d")%>
             </div>
             </div>
             <hr>
