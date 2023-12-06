@@ -21,19 +21,20 @@
       </div>
 
       <div class="box-div-name">
-        <h2><%= @doctor.first_name %> <%= @doctor.last_name %></h2>
+        <h2 id="name-show"><%= @doctor.first_name %> <%= @doctor.last_name %></h2>
         <h4>Online Therapy & In Person Therapy</h4>
         <br>
         <br>
-        <h4>Specialization:</h4>
+        <h4 id="h4-spec"><strong>Specialization:</strong></h4>
         <% @doctor.symptoms.each do |s|  %>
         <h5><%= s.name %></h5>
         <% end %>
       </div>
 
       <div class="box-div">
-      <h4>Contacts:</h4>
+      <h4><strong>Contacts:</strong></h4>
       <h5> <i class="fa-solid fa-phone"></i> <%= @doctor.phone_nr %></h5>
+      <br>
       <h5> <i class="fa-solid fa-envelope"></i> <%= @doctor.email %></h5>
       <br>
       <br>
@@ -45,7 +46,7 @@
 
     <div class="box2">
     <br>
-    <h4>About <%= @doctor.first_name %>: </h4>
+    <h4 id="h4-spec"><strong>About <%= @doctor.first_name %>:</strong> </h4>
     <p> <h5><%= @doctor.about  %> </h5>
     </p>
     </div>
@@ -71,14 +72,14 @@
     <div class="div-rev">
       <h5>Reviews</h5>
       <% if @doctor.doctor_bookings.where(patient: current_user, doctor: @doctor).any? %>
-      <div><%= link_to "Review", new_doctor_review_path(@doctor), class: "btn-message"%></div>
+      <div><%= link_to "Review", new_doctor_review_path(@doctor), class: "btn-book"%></div>
       <% end %>
     </div>
 
       <%if @doctor.doctor_reviews %>
         <% @doctor.doctor_reviews.each do |review| %>
           <div class="box-div">
-            <div>
+            <div class="star">
             <%= review.comment %>
             <%  review.rating.to_i.times do  %>⭐<% end %>
             </div>
