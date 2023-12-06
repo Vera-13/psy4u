@@ -7,7 +7,6 @@
     <%= link_to doctor_path(doctor), class: "docs-box" do %>
         <div class="img-rat">
           <div class="img-av">
-            <div class="doc-name"><h4><%= doctor.first_name %> <%= doctor.last_name %></h4></div>
               <% if doctor.photo.attached? %>
                 <%= cl_image_tag doctor.photo.key,gravity: :faces, height: 200, width: 200, crop: :thumb %>
               <% else %>
@@ -22,24 +21,45 @@
                 <% rat.round.to_i.times do %>
                   ⭐
                 <% end %>
+                (<%= array.size %>)
             <% end %>
           </div>
         </div>
 
-        <div class="doc-specs">
-          <h4 class="bold-text">Specialization:</h4>
-          <h5>Couple Therapy</h5>
-          <h5>OCD</h5>
+
+
+        <div class="indexnew">
+            <h4 class="bold-text"><%= doctor.first_name %> <%= doctor.last_name %></h4>
+            <br>
+            <h5><i class="fa-solid fa-camera"></i> Online therapy</h5>
+            <h5><i class="fa-solid fa-user"></i> In person therapy </h5>
+            <br>
+            <h5> Available on a weekly basis</h5>
+            <br>
+            <br>
+            <h6><i class="fa-solid fa-circle-check"></i> Certified by Psy4U</h6>
+        </div>
+        <div class="indexnew">
+            <h4 class="bold-text">Specialization:</h4>
+            <br>
+            <% doctor.symptoms.each do |s|  %>
+            <h5><%= s.name %></h5>
+            <% end %>
+        </div>
+        <div class="indexnew">
+            <h4 class="bold-text">Address:</h4>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h5> 50€/h</h5>
         </div>
 
-        <div class="doc-infos">
-          <div class="zip">
-            <h4 class="bold-text"><br>ZIP CODE:</h4>
-          </div>
-          <div class="price">
-            <h4> 50$/h</h4>
-          </div>
-        </div>
+
       <% end %>
     <% end %>
 </div>
