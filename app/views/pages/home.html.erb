@@ -9,7 +9,7 @@
   <br>
   <div class="search-card">
       <div class="search-bar">
-      <%= form_with url: doctors_path, method: :get, class: "d-flex" do %>
+      <%= form_with url: doctors_path, method: :get, class: "d-flex input-group" do %>
         <%= text_field_tag :query,
               params[:query],
               class: "form-control-custom",
