@@ -11,12 +11,13 @@
           <% else %>
             <%= image_tag "icon.png" , height: 350, width: 350, crop: :fill %>
           <% end %>
-        <div class="rate">
+        <div class="rate rating">
           <% unless @doctor.doctor_reviews.empty? %>
             <% array =  @doctor.doctor_reviews.map do |review| review.rating  end %>
                 <%rat = array.sum / array.size %>
                 <% rat.round.to_i.times do %> ⭐ <% end %>
           <% end %>
+          (<%= array.size %>)
         </div>
       </div>
 
