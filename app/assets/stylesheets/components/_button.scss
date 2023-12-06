@@ -6,6 +6,7 @@
   padding: 7px;
   border-radius: 6px;
   text-decoration: none;
+  margin-top: 10px;
   &:hover {
     color:  #4f89a9;
   }
@@ -13,14 +14,14 @@
 
 .btn-cancel {
   background-color: white;
-  color: #c81d25;
-  border: 1px solid #c81d25;
+  color: #118ab293;
+  border: 1px solid #118ab293;
   padding: 7px;
   border-radius: 6px;
   margin-top: 10px;
   text-decoration: none;
   &:hover {
-    color:  #ff5a5f;
+    color:  #118ab293;
   }
 }
 
@@ -53,4 +54,10 @@
   &:hover {
     color: #4f89a9;
   }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
