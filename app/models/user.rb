@@ -10,11 +10,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable
 
-  validates :postal_code, length: { is: 4 }, numericality: { only_integer: true }, presence: true
+  validates :address, presence: true
 
-  geocoded_by :postal_code
-  after_validation :geocode, if: :will_save_change_to_postal_code?
-  
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   def booked_hours
     doctor_bookings.where("date > ?", DateTime.now).pluck(:date)
   end
