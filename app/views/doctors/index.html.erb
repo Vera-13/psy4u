@@ -2,7 +2,9 @@
   <i class="fa-solid fa-arrow-left"></i>
 <% end %>
 
+<h2 class="title">Our pshychologists in your area</h2>
 <div class="docx_box">
+
   <% @doctors.each do |doctor| %>
     <%= link_to doctor_path(doctor), class: "docs-box" do %>
         <div class="img-rat">
@@ -34,7 +36,7 @@
             <h5><i class="fa-solid fa-camera"></i> Online therapy</h5>
             <h5><i class="fa-solid fa-user"></i> In person therapy </h5>
             <br>
-            <h5> Available on a weekly basis</h5>
+
             <br>
             <br>
             <h6><i class="fa-solid fa-circle-check"></i> Certified by Psy4U</h6>
@@ -49,14 +51,15 @@
         <div class="indexnew">
             <h4 class="bold-text">Address:</h4>
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <h5> <i class="fa-solid fa-location-dot"></i> <%= doctor.address %></h5>
             <br>
             <h5> 50€/h</h5>
+            <br>
+            <h5><i class="fa-solid fa-calendar-days"></i> Available on a weekly basis</h5>
+            <br>
+            <br>
+            <br>
+
         </div>
 
 
