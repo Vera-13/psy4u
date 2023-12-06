@@ -2,8 +2,11 @@ class DoctorsController < ApplicationController
   def index
     @doctors = User.where(is_doctor: true)
     @booking = Booking.new
+    # if params[:query].present?
+    #   @doctors = @doctors.where(address: params[:query])
+    # end
     if params[:query].present?
-      @doctors = @doctors.where(postal_code: params[:query])
+      @doctors = @doctors.where("address ILIKE ?", "%#{params[:query]}%")
     end
   end
 
