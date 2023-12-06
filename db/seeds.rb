@@ -72,11 +72,11 @@ user4.photo.attach(io: file, filename: "#{user4.first_name}.png", content_type: 
 puts "created #{user4.first_name}"
 
 file = URI.open("https://st4.depositphotos.com/12985790/25235/i/600/depositphotos_252354162-stock-photo-excited-curly-african-american-girl.jpg")
-user5 = User.create(first_name: "Abby", last_name: "Ash", email: "abby.ash@gmail.com", address: "5352", password: "Rue Royale 200, Bruxelles,  1210, Belgium", is_doctor: true, price_session: "70", phone_nr: "+32 008 765 837", about: "Compassionate child psychologist committed to nurturing the mental and emotional development of young minds. Through a blend of play therapy, family dynamics understanding, and specialized interventions, I help children and adolescents flourish in their unique environments, fostering resilience and emotional well-being.")
+user5 = User.create(first_name: "Abby", last_name: "Ash", email: "abby.ash@gmail.com", address: "Rue Royale 316, Bruxelles,  1210, Belgium", password: "Rue Royale 200, Bruxelles,  1210, Belgium", is_doctor: true, price_session: "70", phone_nr: "+32 008 765 837", about: "Compassionate child psychologist committed to nurturing the mental and emotional development of young minds. Through a blend of play therapy, family dynamics understanding, and specialized interventions, I help children and adolescents flourish in their unique environments, fostering resilience and emotional well-being.")
 user5.photo.attach(io: file, filename: "#{user5.first_name}.png", content_type: "image/png")
 puts "created #{user5.first_name}"
 
-file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.18169-9/15781149_1181995688565497_3639101385938457303_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=be3454&_nc_ohc=Rve-bjDhpyAAX-hz1Y5&_nc_ht=scontent-bru2-1.xx&oh=00_AfDaqP21CvLHD-NmCytm8H7S4kT62j3FSdFdSdv_SHGt6Q&oe=6596CCD0")
+file = URI.open("https://files.slack.com/files-pri/T02NE0241-F068UL3HNPP/img_1402.jpg")
 user6 = User.new(first_name: "Leone", last_name: "Claser", email: "leone.claser@gmail.com", address: "Rue Royale 25, Bruxelles,  1210, Belgium", password: "123456", is_doctor: true, price_session: "75", phone_nr: "+32 706 065 266", about: "Welcome to my corner of insight and understanding. As a dedicated psychologist, I'm committed to guiding individuals through their unique journeys of self-discovery and healing. With a blend of empathy, expertise, and a passion for mental wellness, I strive to create a safe, nurturing space where my clients can explore, grow, and thrive. Join me as we navigate the complexities of the human mind and embark on a transformative path toward well-being and fulfillment")
 user6.photo.attach(io: file, filename: "#{user6.first_name}.png", content_type: "image/png")
 user6.save!
