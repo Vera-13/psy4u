@@ -80,8 +80,12 @@
         <% @doctor.doctor_reviews.each do |review| %>
           <div class="box-div">
             <div class="star">
-            <%= review.comment %>
             <%  review.rating.to_i.times do  %>⭐<% end %>
+            <br>
+            <%= review.comment %>
+            <div class="revname">
+              <%= review.doctor.first_name %> created at <%= review.created_at.strftime("%Y-%m-%d")%>
+            </div>
             </div>
             <hr>
           </div>
