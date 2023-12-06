@@ -298,7 +298,6 @@ Specialization.create!(doctor_id: user18.id, symptom_id: sym3.id)
 Specialization.create!(doctor_id: user18.id, symptom_id: sym1.id)
 
 Specialization.create!(doctor_id: user18.id, symptom_id: sym7.id)
-Specialization.create!(doctor_id: user18.id, symptom_id: sym1.id)
 Specialization.create!(doctor_id: user18.id, symptom_id: sym2.id)
 
 Specialization.create!(doctor_id: user19.id, symptom_id: sym4.id)
