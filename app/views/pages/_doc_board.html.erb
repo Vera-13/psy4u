@@ -10,11 +10,11 @@
             </div>
             <div class="btns">
             <% chatroom = Chatroom.find_by(patient: booking.patient, doctor: booking.doctor) %>
-               <%= link_to chatroom_path(chatroom), class: "btn-message" do %>
+              <%= link_to chatroom_path(chatroom), class: "btn-message" do %>
                 Message
                 <i class="fa-regular fa-paper-plane"></i>
               <% end %>
-               <div class="canc_btn">
+              <div class="canc_btn">
                 <%= link_to booking_path(booking),  class: "btn-cancel",  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
                 Cancel
                 <i class="fa-solid fa-square-xmark"></i>

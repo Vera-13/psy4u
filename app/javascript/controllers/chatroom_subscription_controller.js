@@ -11,6 +11,7 @@ export default class extends Controller {
       { received: data => this.#insertMessageAndScrollDown(data) }
     )
     console.log(`Subscribed to the chatroom with the id ${this.chatroomIdValue}.`)
+
   }
 
   #insertMessageAndScrollDown(data) {
@@ -45,7 +46,6 @@ export default class extends Controller {
   #userStyleClass(currentUserIsSender) {
     return currentUserIsSender ? "sender-style" : "receiver-style"
   }
-
 
 }
 
