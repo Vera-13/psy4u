@@ -1,6 +1,6 @@
 .navbar-lewagon {
   font-family: "Raleway";
-  font-size: medium;
+  font-size: large;
   justify-content: space-between;
   background: white;
   box-shadow: 0 0 15px #9dcee2;
@@ -35,4 +35,11 @@ a{
   position: sticky;
   top: 0;
 }
+}
+
+.nav-name {
+  color: $gray;
+  font-family: "Raleway";
+  font-size: large;
+  margin-top: 5px;
 }
