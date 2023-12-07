@@ -106,7 +106,7 @@ puts "created #{user5.first_name}"
 
 
 file = URI.open("https://st4.depositphotos.com/1017228/30877/i/600/depositphotos_308773206-stock-photo-portrait-of-a-handsome-mature.jpg")
-user6 = User.new(first_name: "Leone", last_name: "Claser", email: "leone.claser@gmail.com", address: "Boulevard du Triomphe 172, Bruxelles,  1210, Belgium", password: "123456", is_doctor: true, do_online: false, price_session: "75", phone_nr: "+32 706 065 266", about: "Welcome to my corner of insight and understanding. As a dedicated psychologist, I'm committed to guiding individuals through their unique journeys of self-discovery and healing. With a blend of empathy, expertise, and a passion for mental wellness, I strive to create a safe, nurturing space where my clients can explore, grow, and thrive. Join me as we navigate the complexities of the human mind and embark on a transformative path toward well-being and fulfillment.")
+user6 = User.new(first_name: "Leone", last_name: "Claser", email: "leone.claser@gmail.com", address: "	Anspachlaan 74, Bruxelles,  1000, Belgium", password: "123456", is_doctor: true, do_online: false, price_session: "75", phone_nr: "+32 706 065 266", about: "Welcome to my corner of insight and understanding. As a dedicated psychologist, I'm committed to guiding individuals through their unique journeys of self-discovery and healing. With a blend of empathy, expertise, and a passion for mental wellness, I strive to create a safe, nurturing space where my clients can explore, grow, and thrive. Join me as we navigate the complexities of the human mind and embark on a transformative path toward well-being and fulfillment.")
 user6.photo.attach(io: file, filename: "#{user6.first_name}.png", content_type: "image/png")
 user6.save!
 puts "created #{user6.first_name}"
@@ -117,8 +117,8 @@ user7.photo.attach(io: file, filename: "#{user7.first_name}.png", content_type: 
 user7.save!
 puts "created #{user7.first_name}"
 
-file = URI.open("https://st.depositphotos.com/1662991/52203/i/600/depositphotos_522034584-stock-photo-handsome-latin-man-glasses-casual.jpg")
-user8 = User.new(first_name: "Lucas", last_name: "Rave", email: "lucas.rave@gmail.com", address: "	Chaussee de Boondael 332, Ixelles, 1050, Belgium", password: "123456", is_doctor: true, do_online: false, price_session: "75", phone_nr: "+32 745 435 246", about: "Welcome to my corner of insight and understanding. As a dedicated psychologist, I'm committed to guiding individuals through their unique journeys of self-discovery and healing. With a blend of empathy, expertise, and a passion for mental wellness, I strive to create a safe, nurturing space where my clients can explore, grow, and thrive. Join me as we navigate the complexities of the human mind and embark on a transformative path toward well-being and fulfillment.")
+file = URI.open("https://st3.depositphotos.com/1743476/16188/i/600/depositphotos_161885998-stock-photo-mature-mixed-race-man-smiling.jpg")
+user8 = User.new(first_name: "Terry", last_name: "Collard", email: "terry.collard@gmail.com", address: "	Chaussee de Boondael 332, Ixelles, 1050, Belgium", password: "123456", is_doctor: true, do_online: false, price_session: "75", phone_nr: "+32 745 435 246", about: "Welcome to my corner of insight and understanding. As a dedicated psychologist, I'm committed to guiding individuals through their unique journeys of self-discovery and healing. With a blend of empathy, expertise, and a passion for mental wellness, I strive to create a safe, nurturing space where my clients can explore, grow, and thrive. Join me as we navigate the complexities of the human mind and embark on a transformative path toward well-being and fulfillment.")
 user8.photo.attach(io: file, filename: "#{user8.first_name}.png", content_type: "image/png")
 user8.save!
 puts "created #{user8.first_name}"
@@ -508,6 +508,9 @@ DocLang.create!(language_id: de.id, doctor_id: user16.id)
 
 DocLang.create!(language_id: it.id, doctor_id: user17.id)
 DocLang.create!(language_id: de.id, doctor_id: user17.id)
+
+DocLang.create!(language_id: en.id, doctor_id: user18.id)
+DocLang.create!(language_id: fr.id, doctor_id: user18.id)
 
 DocLang.create!(language_id: en.id, doctor_id: user19.id)
 
