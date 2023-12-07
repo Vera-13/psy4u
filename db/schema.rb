@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_06_080239) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_07_141305) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -59,6 +59,21 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_06_080239) do
     t.datetime "updated_at", null: false
     t.index ["doctor_id"], name: "index_chatrooms_on_doctor_id"
     t.index ["patient_id"], name: "index_chatrooms_on_patient_id"
+  end
+
+  create_table "doc_langs", force: :cascade do |t|
+    t.bigint "language_id", null: false
+    t.bigint "doctor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["doctor_id"], name: "index_doc_langs_on_doctor_id"
+    t.index ["language_id"], name: "index_doc_langs_on_language_id"
+  end
+
+  create_table "languages", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "messages", force: :cascade do |t|
@@ -125,6 +140,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_06_080239) do
   add_foreign_key "bookings", "users", column: "patient_id"
   add_foreign_key "chatrooms", "users", column: "doctor_id"
   add_foreign_key "chatrooms", "users", column: "patient_id"
+  add_foreign_key "doc_langs", "languages"
+  add_foreign_key "doc_langs", "users", column: "doctor_id"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
   add_foreign_key "reviews", "users", column: "doctor_id"

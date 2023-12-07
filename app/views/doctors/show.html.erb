@@ -42,9 +42,13 @@
       <h5> <i class="fa-solid fa-envelope"></i> <%= @doctor.email %></h5>
       <h5> <i class="fa-solid fa-location-dot"></i> <%= @doctor.address %></h5>
       <br>
-      <br>
-      <br>
-        <h4>€<%= @doctor.price_session %>/session</h4>
+      <h4><strong>Language</strong></h4>
+      <% @doctor.languages.each do |lang| %>
+      <h5><%= lang.name %></h5>
+      <% end %>
+      <div id="price">
+      <h4>€<%= @doctor.price_session %>/session</h4>
+      </div>
       </div>
     </div>
 

@@ -1,6 +1,8 @@
 require "open-uri"
 Chatroom.destroy_all
 Review.destroy_all
+DocLang.destroy_all
+Language.destroy_all
 User.destroy_all
 Symptom.destroy_all
 puts "Cleaned database..."
@@ -447,3 +449,68 @@ Specialization.create!(doctor_id: user19.id, symptom_id: sym3.id)
 Specialization.create!(doctor_id: user20.id, symptom_id: sym4.id)
 Specialization.create!(doctor_id: user20.id, symptom_id: sym6.id)
 Specialization.create!(doctor_id: user20.id, symptom_id: sym5.id)
+
+puts "creating languages"
+fr = Language.create!(name: "French")
+en = Language.create!(name: "English")
+it = Language.create!(name: "Italian")
+de = Language.create!(name: "German")
+
+DocLang.create!(language_id: fr.id, doctor_id: user1.id)
+DocLang.create!(language_id: en.id, doctor_id: user1.id)
+DocLang.create!(language_id: de.id, doctor_id: user1.id)
+
+DocLang.create!(language_id: fr.id, doctor_id: user2.id)
+DocLang.create!(language_id: it.id, doctor_id: user2.id)
+DocLang.create!(language_id: en.id, doctor_id: user2.id)
+
+DocLang.create!(language_id: it.id, doctor_id: user3.id)
+DocLang.create!(language_id: en.id, doctor_id: user3.id)
+DocLang.create!(language_id: fr.id, doctor_id: user3.id)
+
+DocLang.create!(language_id: en.id, doctor_id: user4.id)
+DocLang.create!(language_id: fr.id, doctor_id: user4.id)
+
+DocLang.create!(language_id: de.id, doctor_id: user5.id)
+DocLang.create!(language_id: en.id, doctor_id: user5.id)
+
+DocLang.create!(language_id: en.id, doctor_id: user6.id)
+DocLang.create!(language_id: it.id, doctor_id: user6.id)
+
+DocLang.create!(language_id: en.id, doctor_id: user7.id)
+DocLang.create!(language_id: fr.id, doctor_id: user7.id)
+
+DocLang.create!(language_id: fr.id, doctor_id: user8.id)
+DocLang.create!(language_id: en.id, doctor_id: user8.id)
+DocLang.create!(language_id: de.id, doctor_id: user8.id)
+
+DocLang.create!(language_id: en.id, doctor_id: user9.id)
+DocLang.create!(language_id: fr.id, doctor_id: user9.id)
+
+DocLang.create!(language_id: fr.id, doctor_id: user10.id)
+DocLang.create!(language_id: en.id, doctor_id: user10.id)
+DocLang.create!(language_id: de.id, doctor_id: user10.id)
+
+DocLang.create!(language_id: en.id, doctor_id: user11.id)
+DocLang.create!(language_id: it.id, doctor_id: user11.id)
+
+DocLang.create!(language_id: fr.id, doctor_id: user12.id)
+
+DocLang.create!(language_id: en.id, doctor_id: user13.id)
+DocLang.create!(language_id: fr.id, doctor_id: user13.id)
+
+DocLang.create!(language_id: en.id, doctor_id: user14.id)
+
+DocLang.create!(language_id: en.id, doctor_id: user15.id)
+
+DocLang.create!(language_id: en.id, doctor_id: user16.id)
+DocLang.create!(language_id: de.id, doctor_id: user16.id)
+
+DocLang.create!(language_id: it.id, doctor_id: user17.id)
+DocLang.create!(language_id: de.id, doctor_id: user17.id)
+
+DocLang.create!(language_id: en.id, doctor_id: user19.id)
+
+DocLang.create!(language_id: fr.id, doctor_id: user20.id)
+DocLang.create!(language_id: en.id, doctor_id: user20.id)
+DocLang.create!(language_id: it.id, doctor_id: user20.id)
