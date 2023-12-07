@@ -23,7 +23,11 @@
 
       <div class="box-div-name">
         <h2 id="name-show"><%= @doctor.first_name %> <%= @doctor.last_name %></h2>
+        <% if @doctor.do_online %>
         <h4>Online & In Person Therapy</h4>
+        <% else %>
+        <h4>In Person Therapy</h4>
+        <% end %>
         <br>
         <br>
         <h4 id="h4-spec"><strong>Specialization:</strong></h4>
