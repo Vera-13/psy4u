@@ -27,8 +27,14 @@
         <h4 class="bold-text"><%= spec.doctor.first_name %> <%= spec.doctor.last_name %></h4>
         <h5>Psychologist</h5>
         <br>
+        <% if spec.doctor.do_online %>
         <h5><i class="fa-solid fa-camera"></i> Online therapy</h5>
         <h5><i class="fa-solid fa-user"></i> In person therapy </h5>
+        <% else %>
+        <h5><i class="fa-solid fa-user"></i> In person therapy </h5>
+        <% end %>
+
+
 
         <h6><i class="fa-solid fa-circle-check"></i> Certified by Psy4U</h6>
       </div>
