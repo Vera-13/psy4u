@@ -5,9 +5,11 @@
   border-radius: 5px;
   padding: 5px;
   justify-content: space-between;
-  box-sizing: border-box;
+  // box-sizing: content-box;
 }
 .search-bar input {
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   box-sizing: border-box;
   border-radius: 5px;
@@ -31,4 +33,7 @@
 
 .form-control-custom {
   width: 700px !important;
+}
+.d-flex  {
+  width: auto !important;
 }

@@ -33,8 +33,13 @@
         <div class="indexnew">
             <h4 class="bold-text"><%= doctor.first_name %> <%= doctor.last_name %></h4>
             <br>
+            <% if doctor.do_online %>
             <h5><i class="fa-solid fa-camera"></i> Online therapy</h5>
             <h5><i class="fa-solid fa-user"></i> In person therapy </h5>
+            <% else %>
+            <h5><i class="fa-solid fa-user"></i> In person therapy </h5>
+            <% end %>
+
             <br>
 
             <br>
@@ -53,7 +58,7 @@
             <br>
             <h5> <i class="fa-solid fa-location-dot"></i> <%= doctor.address %></h5>
             <br>
-            <h5> 50€/h</h5>
+            <h5>€<%= doctor.price_session %>/session</h5>
             <br>
             <h5><i class="fa-solid fa-calendar-days"></i> Available on a weekly basis</h5>
             <br>

@@ -1,8 +1,9 @@
-<div class="">
+<div>
   <%= link_to doctors_path, class: "back-arrow" do %>
   <i class="fa-solid fa-arrow-left"></i>
   <% end %>
   <div class="box">
+
     <div class="box1">
 
       <div class="box-div">
@@ -23,7 +24,11 @@
 
       <div class="box-div-name">
         <h2 id="name-show"><%= @doctor.first_name %> <%= @doctor.last_name %></h2>
-        <h4>Online & In Person Therapy</h4>
+        <% if @doctor.do_online %>
+        <h4> Online & In Person Therapy</h4>
+        <% else %>
+        <h4> In Person Therapy</h4>
+        <% end %>
         <br>
         <br>
         <h4 id="h4-spec"><strong>Specialization:</strong></h4>
@@ -38,9 +43,13 @@
       <h5> <i class="fa-solid fa-envelope"></i> <%= @doctor.email %></h5>
       <h5> <i class="fa-solid fa-location-dot"></i> <%= @doctor.address %></h5>
       <br>
-      <br>
-      <br>
-        <h4>€<%= @doctor.price_session %>/session</h4>
+      <h4><strong>Language</strong></h4>
+      <% @doctor.languages.each do |lang| %>
+      <h5><%= lang.name %></h5>
+      <% end %>
+      <div id="price">
+      <h4>€<%= @doctor.price_session %>/session</h4>
+      </div>
       </div>
     </div>
 
@@ -90,9 +99,9 @@
             <hr>
           </div>
         <% end %>
-        <% else %>
-          <h5>No reviews yet ... </h5>
+      <% else %>
+        <h5>No reviews yet ... </h5>
         <% end %>
+      </div>
     </div>
-  </div>
 </div>

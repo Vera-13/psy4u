@@ -20,5 +20,6 @@ class DoctorsController < ApplicationController
         info_window_html: render_to_string(partial: "info_window", locals: {doctor: @doctor}),
         marker_html: render_to_string(partial: "marker", locals: {doctor: @doctor})
       }
+    @language = Language.all
   end
 end

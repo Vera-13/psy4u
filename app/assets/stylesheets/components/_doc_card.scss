@@ -9,7 +9,6 @@
 .back-arrow {
   padding: 5px;
   margin-right: 20px;
-  margin-left: -20px;
   margin-top: 15px;
   color: $gray;
   font-size: large;
@@ -222,3 +221,7 @@ a {
   justify-content: center;
 }
 
+#price {
+  text-align: right;
+  margin-bottom: 20px;
+}
