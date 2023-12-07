@@ -32,19 +32,23 @@
   }
 }
 
-.time {
-  margin-left: 247px;
-}
-
-.name {
-  margin-left: 333px;
-}
 
 .btn-send{
   height: 38px;
   width: 38px;
   color: white;
-  background-color: #295f7b;
+  background-color: #29607b;
   border: grey;
   border-radius: 5px;
+}
+
+.text-break {
+  position: relative;
+}
+
+.name {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-top: 5px; /* Add some space between time and name */
 }
