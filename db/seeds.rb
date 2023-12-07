@@ -111,7 +111,7 @@ user6.photo.attach(io: file, filename: "#{user6.first_name}.png", content_type: 
 user6.save!
 puts "created #{user6.first_name}"
 
-file = URI.open("https://st2.depositphotos.com/1662991/9124/i/600/depositphotos_91247756-stock-photo-man-with-a-beard-sitting.jpg")
+file = URI.open("https://st3.depositphotos.com/31313076/33556/i/600/depositphotos_335566414-stock-photo-close-shot-handsome-young-businessman.jpg")
 user7 = User.new(first_name: "Thierry", last_name: "Dupont", email: "thierry.dupont@gmail.com", address: "Chaussee de Vleurgat 119, Bruxelles, 1000, Belgium", password: "123456", is_doctor: true, do_online: true, price_session: "75", phone_nr: "+32 505 535 205", about: "Welcome to my corner of insight and understanding. As a dedicated psychologist, I'm committed to guiding individuals through their unique journeys of self-discovery and healing. With a blend of empathy, expertise, and a passion for mental wellness, I strive to create a safe, nurturing space where my clients can explore, grow, and thrive. Join me as we navigate the complexities of the human mind and embark on a transformative path toward well-being and fulfillment.")
 user7.photo.attach(io: file, filename: "#{user7.first_name}.png", content_type: "image/png")
 user7.save!
