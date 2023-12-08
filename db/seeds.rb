@@ -469,7 +469,7 @@ DocLang.create!(language_id: en.id, doctor_id: user3.id)
 DocLang.create!(language_id: fr.id, doctor_id: user3.id)
 
 DocLang.create!(language_id: en.id, doctor_id: user4.id)
-DocLang.create!(language_id: fr.id, doctor_id: user4.id)
+DocLang.create!(language_id: it.id, doctor_id: user4.id)
 
 DocLang.create!(language_id: de.id, doctor_id: user5.id)
 DocLang.create!(language_id: en.id, doctor_id: user5.id)
